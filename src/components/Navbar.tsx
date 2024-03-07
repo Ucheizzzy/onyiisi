@@ -1,6 +1,7 @@
 'use client'
 
 import { ShoppingCart, Heart, UserRound } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -67,11 +68,18 @@ export default function Navbar() {
         className={`${
           shopDropDown
             ? 'transition-all transform origin-top duration-500 z-10'
-            : 'top-[-500px] transition-all transform origin-top duration-500'
+            : 'top-[-300px] transition-all transform origin-top duration-500'
         } py-[50px] px-9 top-[80px] absolute w-full backdrop-blur-sm`}
       >
         <div className='flex-1 flex items-center gap-10 '>
-          <div className='w-[202px] h-[144px] bg-purple-300 m-4 rounded-md'></div>
+          <div className='w-[202px] h-[144px] relative rounded-md'>
+            <Image
+              src='/shop.png'
+              layout='fill'
+              objectFit='cover'
+              alt='shop image'
+            />
+          </div>
           <div className='flex-4 flex gap-[120px]'>
             <div className=''>
               <h1 className='capitalize underline text-center pb-3'>jewel</h1>
@@ -114,11 +122,18 @@ export default function Navbar() {
         className={`${
           salesDropDown
             ? ' transition-all transform origin-top duration-500 z-10'
-            : 'top-[-500px] transition-all transform origin-top duration-500'
+            : 'top-[-300px] transition-all transform origin-top duration-500'
         } py-[50px] px-9 top-[80px] absolute w-full backdrop-blur-sm`}
       >
         <div className='flex-1 flex items-center gap-10 '>
-          <div className='w-[202px] h-[144px] bg-purple-300 m-4 rounded-md'></div>
+          <div className='w-[202px] h-[144px] relative rounded-md'>
+            <Image
+              src='/sales.png'
+              layout='fill'
+              objectFit='cover'
+              alt='sales image'
+            />
+          </div>
           <div className='flex-4 flex gap-[120px]'>
             <div className=''>
               <h1 className='capitalize underline text-center pb-3'>
