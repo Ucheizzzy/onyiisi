@@ -68,7 +68,7 @@ export default function Navbar() {
         className={`${
           shopDropDown
             ? 'transition-all transform origin-top duration-500 z-10'
-            : 'top-[-300px] transition-all transform origin-top duration-500'
+            : 'top-[-100%] transition-all transform origin-top duration-500'
         } py-[50px] px-9 top-[80px] absolute w-full backdrop-blur-sm`}
       >
         <div className='flex-1 flex items-center gap-10 '>
@@ -122,7 +122,7 @@ export default function Navbar() {
         className={`${
           salesDropDown
             ? ' transition-all transform origin-top duration-500 z-10'
-            : 'top-[-300px] transition-all transform origin-top duration-500'
+            : 'top-[-100%] transition-all transform origin-top duration-500'
         } py-[50px] px-9 top-[80px] absolute w-full backdrop-blur-sm`}
       >
         <div className='flex-1 flex items-center gap-10 '>
