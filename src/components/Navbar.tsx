@@ -1,7 +1,6 @@
 'use client'
 
 import { ShoppingCart, Heart, UserRound } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Noto_Sans_Georgian } from 'next/font/google'
@@ -26,7 +25,7 @@ export default function Navbar() {
 
   return (
     <header className=''>
-      <div className='px-[60px] h-20 border-b-[1px] border-black flex justify-around items-center z-20 fixed w-full'>
+      <div className='px-[60px] h-20 border-b-[1px] border-black flex justify-around items-center z-20 fixed w-full backdrop-blur-lg'>
         <div className='flex gap-10 flex-1 capitalize'>
           <h3 onClick={toggleShopDropdown} className='cursor-pointer'>
             shop
@@ -39,17 +38,19 @@ export default function Navbar() {
           </h3>
         </div>
         <div className='flex-1'>
-          <h1
-            style={{ fontStyle: 'italic' }}
-            className={`font-semibold georgia italic text-center ${georgia.className}`}
-          >
-            Onyiisi
-          </h1>
+          <Link href='/'>
+            <h1
+              style={{ fontStyle: 'italic' }}
+              className={`font-bold text-2xl italic text-center ${georgia.className}`}
+            >
+              Onyiisi
+            </h1>
+          </Link>
         </div>
         <div className='flex-1 flex gap-5 justify-end'>
-          <ShoppingCart />
-          <Heart />
-          <UserRound />
+          <ShoppingCart className='cursor-pointer' />
+          <Heart className='cursor-pointer' />
+          <UserRound className='cursor-pointer' />
         </div>
       </div>
       {shopDropDown ? <DropdownShop /> : ''}

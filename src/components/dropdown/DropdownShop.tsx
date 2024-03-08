@@ -26,7 +26,7 @@ export default function DropdownShop() {
         //     ? 'transition-all transform origin-top duration-500 z-10'
         //     : 'top-[-100%] transition-all transform origin-top duration-500'
         // } py-[50px] px-9 top-[80px] absolute w-full backdrop-blur-sm`}
-        className='py-[50px] px-9 top-[80px] absolute w-full backdrop-blur-sm'
+        className='py-[50px] px-9 top-[80px]  fixed z-20 w-full backdrop-blur-lg'
       >
         <div className='flex-1 flex items-center gap-10 '>
           <div className='w-[202px] h-[144px] relative rounded-md'>
