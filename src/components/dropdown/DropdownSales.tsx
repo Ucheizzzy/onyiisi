@@ -20,8 +20,8 @@ export default function DropdownSales() {
         // } py-[50px] px-9 top-[80px] absolute w-full backdrop-blur-sm`}
         className='py-[50px] px-9 top-[80px] fixed z-20 w-full backdrop-blur-lg'
       >
-        <div className='flex-1 flex items-center gap-10 '>
-          <div className='w-[202px] h-[144px] relative rounded-md'>
+        <div className='flex-1 flex items-center gap-6 lg:gap-10 '>
+          <div className='w-[150px] lg:w-[202px] h-[108px] lg:h-[144px] relative rounded-md'>
             <Image
               src='/sales.png'
               layout='fill'
@@ -29,7 +29,7 @@ export default function DropdownSales() {
               alt='sales image'
             />
           </div>
-          <div className='flex-4 flex gap-[120px]'>
+          <div className='flex-4 flex gap-[60px] lg:gap-[120px]'>
             <div className=''>
               <h1 className='capitalize underline font-medium text-center pb-3'>
                 dropdown header

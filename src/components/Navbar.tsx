@@ -25,8 +25,8 @@ export default function Navbar() {
 
   return (
     <header className=''>
-      <div className='px-[60px] h-20 border-b-[1px] border-black flex justify-around items-center z-20 fixed w-full backdrop-blur-lg'>
-        <div className='flex gap-10 flex-1 capitalize'>
+      <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-black flex justify-around items-center z-20 fixed w-full backdrop-blur-lg'>
+        <div className='flex gap-5 lg:gap-10 flex-1 capitalize'>
           <h3 onClick={toggleShopDropdown} className='cursor-pointer'>
             shop
           </h3>
@@ -47,7 +47,7 @@ export default function Navbar() {
             </h1>
           </Link>
         </div>
-        <div className='flex-1 flex gap-5 justify-end'>
+        <div className='flex-1 flex gap-5 scale-75 lg:scale-100 justify-end'>
           <ShoppingCart className='cursor-pointer' />
           <Heart className='cursor-pointer' />
           <UserRound className='cursor-pointer' />
