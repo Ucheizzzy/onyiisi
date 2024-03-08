@@ -5,8 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Noto_Sans_Georgian } from 'next/font/google'
-import DropdownShop from './dropdown/Dropdownshop'
 import DropdownSales from './dropdown/DropdownSales'
+import DropdownShop from './dropdown/DropdownShop'
 
 const georgia = Noto_Sans_Georgian({ subsets: ['latin'] })
 

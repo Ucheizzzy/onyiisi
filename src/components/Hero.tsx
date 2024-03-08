@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Hero() {
   return (
     <div className='py-20'>
-      <div className='px-20 uppercase text-7xl'>
+      <div className='px-20 uppercase text-7xl mt-8'>
         <h1 className='font-thin text-orange-800'>radiating Luxury</h1>
         <h1 className='font-extrabold'>one gleam at a time.</h1>
       </div>
