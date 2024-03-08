@@ -1,5 +1,6 @@
 import Categories from '@/components/Categories'
 import Hero from '@/components/Hero'
+import PopularItems from '@/components/PopularItems'
 import Image from 'next/image'
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main>
       <Hero />
       <Categories />
+      <PopularItems />
     </main>
   )
 }

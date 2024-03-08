@@ -4,10 +4,13 @@ import { MoveDownRight } from 'lucide-react'
 export default function Hero() {
   return (
     <div className='py-14 lg:py-16 xl:py-20'>
+      {/* Hero Header  */}
       <div className='px-14 lg:px-16 xl:px-20 uppercase text-3xl lg:text-5xl xl:text-7xl mt-8'>
         <h1 className='font-thin text-orange-800'>radiating Luxury</h1>
         <h1 className='font-extrabold'>one gleam at a time.</h1>
       </div>
+
+      {/* Hero Image and Details */}
       <div className=''>
         <div className='w-full h-[400px] md:h-[480px] lg:h-[680px] xl:h-[729px] relative my-5 lg:my-10 z-0'>
           <Image
@@ -40,6 +43,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Guarantees  */}
       <div className='flex items-center content-center gap-8 lg:gap-16 px-[25px] lg:px-[50px] xl:px-[100px] 2xl:px-[150px]'>
         <div className=' flex-1 text-center flex flex-col gap-5 content-center items-center'>
           <div className=' h-16 lg:h-20  w-16 lg:w-20 relative'>
