@@ -2,14 +2,14 @@ import { MoveDownRight } from 'lucide-react'
 import Image from 'next/image'
 
 const earrings = [
-  { image: '/Earrings 1.svg', name: 'Blue Earrings', grams: '234' },
-  { image: '/Earrings 2.svg', name: 'Blue Earrings', grams: '234' },
-  { image: '/Earrings 3.svg', name: 'Blue Earrings', grams: '234' },
-  { image: '/Earrings 4.svg', name: 'Blue Earrings', grams: '234' },
-  { image: '/Earrings 5.svg', name: 'Blue Earrings', grams: '234' },
-  { image: '/Earrings 6.svg', name: 'Blue Earrings', grams: '234' },
-  { image: '/Earrings 7.svg', name: 'Blue Earrings', grams: '234' },
-  { image: '/Earrings 8.svg', name: 'Blue Earrings', grams: '234' },
+  { index: '1', image: '/Earrings 1.svg', name: 'Blue Earrings', grams: '234' },
+  { index: '2', image: '/Earrings 2.svg', name: 'Blue Earrings', grams: '234' },
+  { index: '3', image: '/Earrings 3.svg', name: 'Blue Earrings', grams: '234' },
+  { index: '4', image: '/Earrings 4.svg', name: 'Blue Earrings', grams: '234' },
+  { index: '5', image: '/Earrings 5.svg', name: 'Blue Earrings', grams: '234' },
+  { index: '6', image: '/Earrings 6.svg', name: 'Blue Earrings', grams: '234' },
+  { index: '7', image: '/Earrings 7.svg', name: 'Blue Earrings', grams: '234' },
+  { index: '8', image: '/Earrings 8.svg', name: 'Blue Earrings', grams: '234' },
 ]
 
 export default function PopularItems() {
@@ -29,7 +29,10 @@ export default function PopularItems() {
       {/* Earrings */}
       <div className='flex flex-wrap gap-10 lg:gap-14 my-10 justify-center'>
         {earrings.map((item) => (
-          <div className=' bg-[rgb(230,230,230)] rounded-md text-center h-[220px] lg:h-[280px] 2xl:h-[300px] w-[190px] lg:w-[250px] 2xl:w-[280px]'>
+          <div
+            key={item.index}
+            className=' bg-[rgb(230,230,230)] rounded-md text-center h-[220px] lg:h-[280px] 2xl:h-[300px] w-[190px] lg:w-[250px] 2xl:w-[280px]'
+          >
             <div className='h-[80%] border-b-[1px] flex items-center justify-center border-gray-400'>
               <Image
                 src={item.image}
