@@ -5,7 +5,7 @@ export default function Carousel() {
   return (
     <div className='flex justify-around content-center items-center relative '>
       <div className='flex flex-col items-center'>
-        <div className='relative h-[300px] xl:h-[400px] w-[284px] xl:w-[379px]'>
+        <div className='relative h-[225px] lg:h-[300px] xl:h-[400px] w-[213px] lg:w-[284px] xl:w-[379px]'>
           <Image
             src='/70.jpg'
             alt='percent cut'
@@ -26,7 +26,7 @@ export default function Carousel() {
         </div>
       </div>
       <div className='flex flex-col items-center'>
-        <div className='relative h-[300px] xl:h-[400px] w-[284px] xl:w-[379px] '>
+        <div className='relative h-[225px] lg:h-[300px] xl:h-[400px] w-[213px] lg:w-[284px] xl:w-[379px] '>
           <Image
             src='/trendingCarousel.jpg'
             alt='trending'
@@ -47,7 +47,7 @@ export default function Carousel() {
         </div>
       </div>
       <div className='flex flex-col items-center'>
-        <div className='relative h-[300px] xl:h-[400px] w-[284px] xl:w-[379px]'>
+        <div className='relative h-[225px] lg:h-[300px] xl:h-[400px] w-[213px] lg:w-[284px] xl:w-[379px]'>
           <Image
             src='/limitedCarousel.jpg'
             alt='limited'

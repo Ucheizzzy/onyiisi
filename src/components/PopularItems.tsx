@@ -1,10 +1,52 @@
+import { MoveDownRight } from 'lucide-react'
+import Image from 'next/image'
+
+const earrings = [
+  { image: '/Earrings 1.svg', name: 'Blue Earrings', grams: '234' },
+  { image: '/Earrings 2.svg', name: 'Blue Earrings', grams: '234' },
+  { image: '/Earrings 3.svg', name: 'Blue Earrings', grams: '234' },
+  { image: '/Earrings 4.svg', name: 'Blue Earrings', grams: '234' },
+  { image: '/Earrings 5.svg', name: 'Blue Earrings', grams: '234' },
+  { image: '/Earrings 6.svg', name: 'Blue Earrings', grams: '234' },
+  { image: '/Earrings 7.svg', name: 'Blue Earrings', grams: '234' },
+  { image: '/Earrings 8.svg', name: 'Blue Earrings', grams: '234' },
+]
+
 export default function PopularItems() {
   return (
-    <div className=''>
-      <h1 className='text-3xl font-black capitalize p-20 text-center'>
-        {' '}
-        Popular items loading ...
-      </h1>
+    <div className='p-12'>
+      {/* Header */}
+      <div className='flex justify-between'>
+        <h3 className='uppercase text-xl font-semibold'>Popular items</h3>
+        <button className='text-black py-2 lg:py-3 w-[120px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 border-2 border-black '>
+          learn more
+          <span>
+            <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
+          </span>
+        </button>
+      </div>
+
+      {/* Earrings */}
+      <div className='flex flex-wrap gap-10 lg:gap-14 my-10 justify-center'>
+        {earrings.map((item) => (
+          <div className=' bg-[rgb(230,230,230)] rounded-md text-center h-[220px] lg:h-[280px] 2xl:h-[300px] w-[190px] lg:w-[250px] 2xl:w-[280px]'>
+            <div className='h-[80%] border-b-[1px] flex items-center justify-center border-gray-400'>
+              <Image
+                src={item.image}
+                alt={item.name}
+                height={150}
+                width={150}
+              />
+            </div>
+            <div className='pt-1'>
+              <h3 className='font-semibold text-sm'>{item.name}</h3>
+              <p className=' font-thin text-xs text-gray-600'>
+                {item.grams} grams
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
