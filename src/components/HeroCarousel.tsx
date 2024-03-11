@@ -22,7 +22,7 @@ export default function HeroCarousel() {
     return () => clearInterval(interval)
   }, [])
 
-  const goToHero = (idx) => {
+  const goToHero = (idx: number) => {
     setCurrentIndex(idx)
   }
 
