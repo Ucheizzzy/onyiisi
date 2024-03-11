@@ -53,9 +53,15 @@ export default function Navbar() {
 
         {/* Navbar Icons  */}
         <div className='flex-1 flex gap-5 scale-75 lg:scale-100 justify-end'>
-          <ShoppingCart className='cursor-pointer' />
-          <Heart className='cursor-pointer' />
-          <UserRound className='cursor-pointer' />
+          <Link href='/cart'>
+            <ShoppingCart className='cursor-pointer' />
+          </Link>
+          <Link href='/wish-list'>
+            <Heart className='cursor-pointer' />
+          </Link>
+          <Link href='/login'>
+            <UserRound className='cursor-pointer' />
+          </Link>
         </div>
       </div>
 

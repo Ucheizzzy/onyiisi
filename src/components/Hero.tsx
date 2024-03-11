@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { MoveDownRight } from 'lucide-react'
+import HeroCarousel from './HeroCarousel'
 
 export default function Hero() {
   return (
@@ -11,7 +12,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Image and Details */}
-      <div className=''>
+      {/* <div className=''>
         <div className='w-full h-[400px] md:h-[480px] lg:h-[680px] xl:h-[729px] relative my-5 lg:my-10 z-0'>
           <Image
             src='/Hero.png'
@@ -30,19 +31,14 @@ export default function Hero() {
               </span>
             </button>
             <div className='flex gap-1 '>
-              <button className=' bg-orange-800 py-[2px] w-[30px] lg:w-[50px] border-none rounded-full'>
-                {' '}
-              </button>
-              <button className='border-[1px] border-orange-800 py-[2px] w-[30px] lg:w-[50px] rounded-full'>
-                {' '}
-              </button>
-              <button className='border-[1px] border-orange-800 py-[2px] w-[30px] lg:w-[50px] rounded-full'>
-                {' '}
-              </button>
+              <button className=' bg-orange-800 py-[2px] w-[30px] lg:w-[50px] border-none rounded-full'></button>
+              <button className='border-[1px] border-orange-800 py-[2px] w-[30px] lg:w-[50px] rounded-full'></button>
+              <button className='border-[1px] border-orange-800 py-[2px] w-[30px] lg:w-[50px] rounded-full'></button>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <HeroCarousel />
 
       {/* Guarantees  */}
       <div className='flex items-center content-center gap-8 lg:gap-16 px-[25px] lg:px-[50px] xl:px-[100px] 2xl:px-[150px]'>

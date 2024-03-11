@@ -40,7 +40,7 @@ export default function Footer() {
         <div className='flex flex-col gap-3'>
           <h1 className='font-bold text-xl mb-5'>Onyiisi</h1>
           <div className='flex items-center gap-1 text-gray-500'>
-            <MapPin className='w-5 h-5' />
+            <MapPin className='' />
             <div className=''>
               <h3 className='font-semibold '>Location</h3>
               <p className='text-sm'>
@@ -49,14 +49,14 @@ export default function Footer() {
             </div>
           </div>
           <div className='flex items-center gap-1 text-gray-500'>
-            <Phone className='w-5 h-5' />
+            <Phone className='' />
             <div className=''>
               <h3 className='font-semibold '>Phone</h3>
               <p className='text-sm'>+234 901 234 5678</p>
             </div>
           </div>
           <div className='flex items-center gap-1 text-gray-500'>
-            <Mail className='w-5 h-5' />
+            <Mail className='' />
             <div className=''>
               <h3 className='font-semibold '>E-Mail</h3>
               <p className='text-sm'>contact@onyiisi.com</p>
