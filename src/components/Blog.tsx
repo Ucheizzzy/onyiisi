@@ -31,7 +31,7 @@ const blogs = [
 
 export default function Blog() {
   return (
-    <div className='p-20'>
+    <div className='p-10 lg:p-20'>
       <div className=''>
         {/* Header  */}
         <div className='flex justify-between'>
@@ -51,16 +51,18 @@ export default function Blog() {
         </div>
 
         {/* Blog Carousel  */}
-        <div className='flex justify-between mt-20'>
+        <div className='flex justify-between mt-10 xl:mt-20'>
           {blogs.map((blog, idx) => (
-            <div key={idx} className='w-[400px] '>
-              <Image
-                className=' rounded-md pb-5'
-                src={blog.img}
-                alt={blog.title}
-                width={400}
-                height={330}
-              />
+            <div key={idx} className='w-[220px] lg:w-[250px] xl:w-[400px] '>
+              <div className='relative w-[220px] lg:w-[250px] xl:w-[400px] h-[170px] lg:h-[200px] xl:h-[330px]'>
+                <Image
+                  className=' rounded-md pb-5  '
+                  src={blog.img}
+                  alt={blog.title}
+                  layout='fill'
+                  objectFit='cover'
+                />
+              </div>
               <div className=''>
                 <p className='font-thin text-sm text-gray-500'>{blog.date}</p>
                 <h3 className='font-bold capitalize '>{blog.title}</h3>
@@ -75,7 +77,7 @@ export default function Blog() {
 
       {/* News Letter  */}
       <div className='flex items-center justify-center'>
-        <div className=' py-10 flex flex-col items-center justify-center w-[50%]'>
+        <div className=' py-10 flex flex-col items-center justify-center w-[80%] lg:w-[50%]'>
           <h2 className='font-semibold py-3 text-xl text-center '>
             Subscribe to our newsletter to get updates on our <br />
             latest drops
