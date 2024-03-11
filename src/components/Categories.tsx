@@ -12,12 +12,13 @@ export default function Categories() {
       <div className='p-18 xl:p-20'>
         {/* Type of Orders  */}
         <div className='flex items-center justify-evenly mb-10 '>
-          <div className='w-[352px] lg:w-[470px] xl:w-[628px] h-[267px] lg:h-[356px] xl:h-[475px] relative flex justify-center items-center'>
+          <div className='w-[352px] lg:w-[470px] xl:w-[628px] h-[267px] lg:h-[356px] xl:h-[475px] relative flex justify-center items-center overflow-hidden'>
             <Image
               src='/Trending.jpg'
               alt='Trending'
               layout='fill'
               objectFit='cover'
+              className=' transform hover:scale-110 transition-transform ease-in-out duration-500'
             />
             <div className='absolute text-center'>
               <h3 className='capitalize text-white text-2xl font-thin pb-2'>
@@ -31,12 +32,13 @@ export default function Categories() {
               </button>
             </div>
           </div>
-          <div className='w-[352px] lg:w-[470px] xl:w-[628px] h-[267px] lg:h-[356px] xl:h-[475px] relative flex justify-center items-center'>
+          <div className='w-[352px] lg:w-[470px] xl:w-[628px] h-[267px] lg:h-[356px] xl:h-[475px] relative flex justify-center items-center overflow-hidden'>
             <Image
               src='/Limited.jpg'
               alt='Limited'
               layout='fill'
               objectFit='cover'
+              className=' transform hover:scale-110 transition-transform ease-in-out duration-500'
             />
             <div className='absolute text-center'>
               <h3 className='capitalize text-white text-2xl font-thin pb-2'>

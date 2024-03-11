@@ -1,13 +1,17 @@
+import Blog from '@/components/Blog'
 import Categories from '@/components/Categories'
+import FeedbackCarousel from '@/components/FeedbackCarousel'
+import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
-import PopularItems from '@/components/PopularItems'
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <Categories />
-      {/* <PopularItems /> */}
+      <FeedbackCarousel />
+      <Blog />
+      <Footer />
     </main>
   )
 }
