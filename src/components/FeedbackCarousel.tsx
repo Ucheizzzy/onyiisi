@@ -72,10 +72,10 @@ export default function FeedbackCarousel() {
             className='swiper_container'
           >
             {feedbacks.map((feedback, idx) => (
-              <SwiperSlide>
+              <SwiperSlide key={idx}>
                 <div
-                  onClick={() => goToImg(idx)}
                   key={idx}
+                  onClick={() => goToImg(idx)}
                   className='relative mx-3 h-[120px] w-[120px] overflow-hidden rounded-full border-4 border-yellow-700'
                 >
                   <Image
