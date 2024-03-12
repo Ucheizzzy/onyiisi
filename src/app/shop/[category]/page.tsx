@@ -5,10 +5,10 @@ import React from 'react'
 
 const CategoryPage = () => {
   return (
-    <div className=' py-20'>
+    <div className='py-0 lg:py-20'>
       <div className=''>
         {/* Main Img */}
-        <div className='relative w-full h-[550px]'>
+        <div className='relative w-full h-[350px] lg:h-[550px]'>
           <Image
             src='/Earrings Page.jpg'
             alt='Earrings'
@@ -20,7 +20,7 @@ const CategoryPage = () => {
           </h2>
         </div>
 
-        <div className='px-20 py-10'>
+        <div className='px-5 lg:px-20 py-10'>
           {/* Navigation */}
           <div className='flex px-10 justify-between items-center'>
             <div className='flex gap-1'>

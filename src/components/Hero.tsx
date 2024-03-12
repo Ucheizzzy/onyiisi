@@ -4,7 +4,7 @@ import HeroCarousel from './HeroCarousel'
 
 export default function Hero() {
   return (
-    <div className='py-14 lg:py-16 xl:py-20'>
+    <div className='py-0 lg:py-16 xl:py-20'>
       {/* Hero Header  */}
       <div className='px-14 lg:px-16 xl:px-20 uppercase text-3xl lg:text-5xl xl:text-7xl mt-8'>
         <h1 className='font-thin text-orange-800'>radiating Luxury</h1>
