@@ -718,6 +718,12 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.mr-14 {
+  margin-right: 3.5rem;
+}
+.mr-16 {
+  margin-right: 4rem;
+}
 .flex {
   display: flex;
 }

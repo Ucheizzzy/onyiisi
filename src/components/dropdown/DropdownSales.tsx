@@ -1,13 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
-const dropdown = [
-  { name: 'nav button', href: '/' },
-  { name: 'nav button1', href: '/' },
-  { name: 'nav button2', href: '/' },
-  { name: 'nav button3', href: '/' },
-  { name: 'nav button4', href: '/' },
-]
+import { unknownDropdown } from '@/app/constants'
 
 export default function DropdownSales() {
   return (
@@ -21,7 +14,7 @@ export default function DropdownSales() {
         className='py-[50px] px-9 top-[80px] absolute lg:fixed z-20 w-full bg-white'
       >
         <div className='flex-1 flex items-center gap-6 lg:gap-10 '>
-          <div className='w-[150px] lg:w-[202px] h-[108px] lg:h-[144px] relative rounded-md'>
+          <div className='w-[150px] lg:w-[202px] h-[108px] lg:h-[144px] relative rounded-md mr-16'>
             <Image
               src='/sales.png'
               layout='fill'
@@ -35,7 +28,7 @@ export default function DropdownSales() {
                 dropdown header
               </h1>
               <ul className='text-center uppercase flex flex-col gap-2'>
-                {dropdown.map((drop, idx) => (
+                {unknownDropdown.map((drop, idx) => (
                   <li key={idx}>
                     <Link href={drop.href}>{drop.name}</Link>
                   </li>
@@ -47,7 +40,7 @@ export default function DropdownSales() {
                 dropdown header
               </h1>
               <ul className='text-center uppercase flex flex-col gap-2'>
-                {dropdown.map((drop, idx) => (
+                {unknownDropdown.map((drop, idx) => (
                   <li key={idx}>
                     <Link href={drop.href}>{drop.name}</Link>
                   </li>
@@ -59,7 +52,7 @@ export default function DropdownSales() {
                 dropdown header
               </h1>
               <ul className='text-center uppercase flex flex-col gap-2'>
-                {dropdown.map((drop, idx) => (
+                {unknownDropdown.map((drop, idx) => (
                   <li key={idx}>
                     <Link href={drop.href}>{drop.name}</Link>
                   </li>
