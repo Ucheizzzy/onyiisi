@@ -1,16 +1,6 @@
 import { MoveDownRight } from 'lucide-react'
 import Image from 'next/image'
-
-const earrings = [
-  { index: '1', image: '/Earrings 1.svg', name: 'Blue Earrings', grams: '234' },
-  { index: '2', image: '/Earrings 2.svg', name: 'Blue Earrings', grams: '234' },
-  { index: '3', image: '/Earrings 3.svg', name: 'Blue Earrings', grams: '234' },
-  { index: '4', image: '/Earrings 4.svg', name: 'Blue Earrings', grams: '234' },
-  { index: '5', image: '/Earrings 5.svg', name: 'Blue Earrings', grams: '234' },
-  { index: '6', image: '/Earrings 6.svg', name: 'Blue Earrings', grams: '234' },
-  { index: '7', image: '/Earrings 7.svg', name: 'Blue Earrings', grams: '234' },
-  { index: '8', image: '/Earrings 8.svg', name: 'Blue Earrings', grams: '234' },
-]
+import { earrings } from '@/constants'
 
 export default function PopularItems() {
   return (
@@ -27,7 +17,7 @@ export default function PopularItems() {
       </div>
 
       {/* Earrings */}
-      <div className='flex flex-wrap gap-10 lg:gap-14 my-10 justify-center'>
+      <div className='flex flex-wrap flex-grow gap-10 lg:gap-14 my-10 justify-center'>
         {earrings.map((item) => (
           <div
             key={item.index}
