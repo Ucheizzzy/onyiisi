@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { categories, specials, collections } from '@/app/constants'
+import { categories, specials, collections } from '@/constants'
 
 export default function DropdownShop() {
   return (

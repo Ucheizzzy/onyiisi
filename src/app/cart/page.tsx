@@ -1,9 +1,13 @@
-export default function page() {
+import React from 'react'
+
+const CartPage = () => {
   return (
-    <div className=''>
+    <div>
       <h1 className='p-20 text-3xl font-black text-center'>
         Cart Page Loading ...
       </h1>
     </div>
   )
 }
+
+export default CartPage

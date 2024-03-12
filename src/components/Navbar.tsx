@@ -36,7 +36,7 @@ export default function Navbar() {
               shop
             </Link>
           </div>
-          <Link href={'/'} className='cursor-pointer'>
+          <Link href={'/about'} className='cursor-pointer'>
             About Us
           </Link>
           <Link

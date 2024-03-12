@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { unknownDropdown } from '@/app/constants'
+import { unknownDropdown } from '@/constants'
 
 export default function DropdownSales() {
   return (
