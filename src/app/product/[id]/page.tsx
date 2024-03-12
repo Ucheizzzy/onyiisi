@@ -29,7 +29,10 @@ const SingleProductPage = () => {
           <Link className='text-gray-400 hover:text-gray-800' href='/shop'>
             Shop |{' '}
           </Link>
-          <Link className='text-gray-400 hover:text-gray-800' href='/shop'>
+          <Link
+            className='text-gray-400 hover:text-gray-800'
+            href='/shop/earrings'
+          >
             Earrings |{' '}
           </Link>
           <p className='font-semibold'> Details</p>
