@@ -19,11 +19,9 @@ const LoginPage = () => {
           Log into your Onyiisi Account
         </h1>
         <p className='text-sm text-center'>
-          Don't have an account?{' '}
-          <span>
-            <Link className='text-orange-800 underline' href='/sign-up'>
-              Create Account
-            </Link>
+          Don't have an account?
+          <span className='text-orange-800 underline'>
+            <Link href='/sign-up'>Create Account</Link>
           </span>
         </p>
         <form className='flex flex-col justify-center pt-8 gap-6'>
