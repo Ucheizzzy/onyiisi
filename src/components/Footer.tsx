@@ -35,7 +35,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <div className='mb-5 px-20'>
+    <div className='m-5 px-20'>
       <div className='flex content-center gap-20 justify-center mb-8'>
         <div className='flex flex-col gap-3'>
           <h1 className='font-bold text-xl mb-5'>Onyiisi</h1>

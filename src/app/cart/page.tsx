@@ -35,7 +35,7 @@ const CartPage = () => {
       {/* Items  */}
       <div className='flex-col flex gap-10'>
         {cartItems.map((item, idx) => (
-          <div className='flex gap-10 items-center'>
+          <div key={idx} className='flex gap-10 items-center'>
             <div className='relative w-[200px] lg:w-[350px] h-[200px] lg:h-[350px]'>
               <Image
                 src={item.img}
