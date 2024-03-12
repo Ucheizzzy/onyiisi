@@ -11,7 +11,6 @@ const georgia = Noto_Sans_Georgian({ subsets: ['latin'] })
 
 export default function Navbar() {
   const [shopDropDown, setShopDropDown] = useState(false)
-
   const [salesDropDown, setSalesDropDown] = useState(false)
 
   const toggleShopDropdown = () => {
@@ -28,15 +27,26 @@ export default function Navbar() {
       <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-black flex justify-around items-center z-20 lg:fixed w-full bg-white'>
         {/* Links  */}
         <div className='flex gap-5 lg:gap-10 flex-1 capitalize'>
-          <h3 onClick={toggleShopDropdown} className='cursor-pointer'>
-            shop
-          </h3>
+          <div onMouseEnter={toggleShopDropdown} className=''>
+            <Link
+              href={'/shop'}
+              onClick={toggleShopDropdown}
+              className='cursor-pointer'
+            >
+              shop
+            </Link>
+          </div>
           <Link href={'/'} className='cursor-pointer'>
             About Us
           </Link>
-          <h3 className='cursor-pointer' onClick={toggleSalesDropdown}>
+          <Link
+            href={'/sales'}
+            className='cursor-pointer'
+            onMouseEnter={toggleSalesDropdown}
+            // onClick={toggleSalesDropdown}
+          >
             sales
-          </h3>
+          </Link>
         </div>
 
         {/* Logo  */}
@@ -69,16 +79,22 @@ export default function Navbar() {
       {/* {shopDropDown ? <DropdownShop /> : ''}
       {salesDropDown ? <DropdownSales /> : ''} */}
       <div
-        className={`transition-height duration-700 ${
-          shopDropDown ? ' block' : 'hidden'
-        }  absolute top-20 left-0 right-0`}
+        onMouseLeave={toggleShopDropdown}
+        className={`${
+          shopDropDown
+            ? 'absolute top-20 left-0 right-0 opacity-100'
+            : ' hidden opacity-0'
+        } transition-opacity ease-in-out duration-300 `}
       >
         <DropdownShop />
       </div>
       <div
-        className={`transition-height duration-700 ${
-          salesDropDown ? ' block' : 'hidden'
-        }  absolute top-20 left-0 right-0`}
+        onMouseLeave={toggleSalesDropdown}
+        className={`${
+          salesDropDown
+            ? 'absolute top-20 left-0 right-0 opacity-100'
+            : ' hidden opacity-0'
+        } transition-top ease-in-out duration-300   `}
       >
         <DropdownSales />
       </div>
