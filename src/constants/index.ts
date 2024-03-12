@@ -98,3 +98,12 @@ export const earringsPage = [
     grams: '234',
   },
 ]
+
+// Earring Details image
+
+export const detailsImg = [
+  { img: '/Details Earring.jpg', trans: 'transform rotate-0' },
+  { img: '/Details Earring.jpg', trans: 'transform rotate-90' },
+  { img: '/Details Earring.jpg', trans: 'transform rotate-270' },
+  { img: '/Details Earring.jpg', trans: 'transform rotate-180' },
+]
