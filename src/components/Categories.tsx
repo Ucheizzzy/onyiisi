@@ -2,6 +2,7 @@ import { MoveDownRight } from 'lucide-react'
 import Image from 'next/image'
 import Carousel from './Carousel'
 import PopularItems from './PopularItems'
+import Link from 'next/link'
 
 export default function Categories() {
   return (
@@ -24,12 +25,14 @@ export default function Categories() {
               <h3 className='capitalize text-white text-2xl font-thin pb-2'>
                 trending
               </h3>
-              <button className='text-white bg-orange-800 py-2 lg:py-3 w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
-                learn more
-                <span>
-                  <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
-                </span>
-              </button>
+              <Link href='/sales/trending'>
+                <button className='text-white bg-orange-800 py-2 lg:py-3 w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+                  learn more
+                  <span>
+                    <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
           <div className='w-[352px] lg:w-[470px] xl:w-[628px] h-[267px] lg:h-[356px] xl:h-[475px] relative flex justify-center items-center overflow-hidden'>

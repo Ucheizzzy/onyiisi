@@ -5,13 +5,13 @@ export default function Carousel() {
   return (
     <div className='flex justify-around content-center items-center relative '>
       <div className='flex flex-col items-center'>
-        <div className='relative h-[225px] lg:h-[300px] xl:h-[400px] w-[213px] lg:w-[284px] xl:w-[379px]'>
+        <div className='relative h-[225px] lg:h-[300px] xl:h-[400px] w-[213px] lg:w-[284px] xl:w-[379px] overflow-hidden'>
           <Image
             src='/70.jpg'
             alt='percent cut'
             layout='fill'
             objectFit='cover'
-            className='rounded-xl'
+            className='rounded-xl transform hover:scale-110 transition-transform ease-in-out duration-500'
           />
           <div className='bg-white absolute left-3 top-6'>
             <p className='px-3 py-[2px]'>-70%</p>
@@ -26,13 +26,13 @@ export default function Carousel() {
         </div>
       </div>
       <div className='flex flex-col items-center'>
-        <div className='relative h-[225px] lg:h-[300px] xl:h-[400px] w-[213px] lg:w-[284px] xl:w-[379px] '>
+        <div className='relative h-[225px] lg:h-[300px] xl:h-[400px] w-[213px] lg:w-[284px] xl:w-[379px] overflow-hidden'>
           <Image
             src='/trendingCarousel.jpg'
             alt='trending'
             layout='fill'
             objectFit='cover'
-            className='rounded-xl'
+            className='rounded-xl transform hover:scale-110 transition-transform ease-in-out duration-500'
           />
           <div className='bg-white absolute left-3 top-6'>
             <p className='px-3 py-[2px] uppercase'>trending</p>
@@ -47,13 +47,13 @@ export default function Carousel() {
         </div>
       </div>
       <div className='flex flex-col items-center'>
-        <div className='relative h-[225px] lg:h-[300px] xl:h-[400px] w-[213px] lg:w-[284px] xl:w-[379px]'>
+        <div className='relative h-[225px] lg:h-[300px] xl:h-[400px] w-[213px] lg:w-[284px] xl:w-[379px] overflow-hidden'>
           <Image
             src='/limitedCarousel.jpg'
             alt='limited'
             layout='fill'
             objectFit='cover'
-            className='rounded-xl'
+            className='rounded-xl transform hover:scale-110 transition-transform ease-in-out duration-500'
           />
           <div className='bg-white absolute left-3 top-6'>
             <p className='px-3 py-[2px] uppercase'>Limited</p>
