@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Carousel() {
   return (
-    <div className='flex justify-around content-center items-center relative '>
+    <div className='flex flex-col md:flex-row justify-around content-center items-center relative '>
       <div className='flex flex-col items-center'>
         <div className='relative h-[225px] lg:h-[300px] xl:h-[400px] w-[213px] lg:w-[284px] xl:w-[379px] overflow-hidden'>
           <Image
@@ -67,8 +67,8 @@ export default function Carousel() {
           <p className=' text-yellow-600 '>$674</p>
         </div>
       </div>
-      <ChevronLeft className='absolute left-0 cursor-pointer hover:scale-150 ease-in-out duration-300' />
-      <ChevronRight className='absolute right-0 cursor-pointer hover:scale-150 ease-in-out duration-300' />
+      {/* <ChevronLeft className='absolute left-0 cursor-pointer hover:scale-150 ease-in-out duration-300' />
+      <ChevronRight className='absolute right-0 cursor-pointer hover:scale-150 ease-in-out duration-300' /> */}
     </div>
   )
 }

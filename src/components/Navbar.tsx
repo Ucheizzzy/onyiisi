@@ -1,6 +1,6 @@
 'use client'
 
-import { ShoppingCart, Heart, UserRound } from 'lucide-react'
+import { ShoppingCart, Heart, UserRound, Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Noto_Sans_Georgian } from 'next/font/google'
@@ -22,11 +22,18 @@ export default function Navbar() {
     setShopDropDown(false)
   }
 
+  // Sidebar function
+  const [sidebar, setSidebar] = useState(false)
+
+  const handleSidebar = () => {
+    setSidebar(!sidebar)
+  }
+
   return (
     <header className='relative'>
-      <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-black flex justify-around items-center z-20 lg:fixed w-full bg-white'>
+      <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-black flex justify-between items-center z-20 lg:fixed w-full bg-white'>
         {/* Links  */}
-        <div className='flex gap-5 lg:gap-10 flex-1 capitalize'>
+        <div className='hidden md:flex gap-5 lg:gap-10 flex-1 capitalize'>
           <div onMouseEnter={toggleShopDropdown} className=''>
             <Link
               href={'/shop'}
@@ -49,6 +56,15 @@ export default function Navbar() {
           </Link>
         </div>
 
+        {/* Side Bar  */}
+        <div onClick={handleSidebar} className='md:hidden flex-1'>
+          {sidebar ? (
+            <X className='w-10 h-10' />
+          ) : (
+            <Menu className='w-10 h-10' />
+          )}
+        </div>
+
         {/* Logo  */}
         <div className='flex-1'>
           <Link href='/'>
@@ -62,12 +78,12 @@ export default function Navbar() {
         </div>
 
         {/* Navbar Icons  */}
-        <div className='flex-1 flex gap-5 scale-75 lg:scale-100 justify-end'>
+        <div className='flex-1 flex gap-5 lg:scale-100 justify-end'>
           <Link href='/cart'>
-            <ShoppingCart className='cursor-pointer' />
+            <ShoppingCart className='cursor-pointer hidden md:block' />
           </Link>
           <Link href='/wish-list'>
-            <Heart className='cursor-pointer' />
+            <Heart className='cursor-pointer hidden md:block' />
           </Link>
           <Link href='/login'>
             <UserRound className='cursor-pointer' />

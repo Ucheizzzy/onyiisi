@@ -3,6 +3,7 @@
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import Image from 'next/image'
 import { feedbacks } from '@/constants'
+import { useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
 
@@ -10,7 +11,6 @@ import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import { useState } from 'react'
 
 export default function FeedbackCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -18,28 +18,42 @@ export default function FeedbackCarousel() {
     setCurrentIndex(idx)
   }
 
+  const prevFeedback = () => {
+    const isFirstComment = currentIndex === 0
+    const newIndex = isFirstComment ? feedbacks.length - 1 : currentIndex - 1
+    setCurrentIndex(newIndex)
+  }
+
+  const nextFeedback = () => {
+    const isLastComment = currentIndex === feedbacks.length - 1
+    const newIndex = isLastComment ? 0 : currentIndex + 1
+    setCurrentIndex(newIndex)
+  }
+
   return (
     <div className='mb-10'>
-      <div className='relative flex justify-center items-center w-full h-[400px] lg:h-[594px]'>
+      <div className='relative flex justify-center items-center w-full h-[500px] md:h-[400px] lg:h-[594px]'>
         <Image
           src='/Feedback bg.jpg'
           alt='Feedback BG'
           layout='fill'
           objectFit='cover'
         />
-        <div className='absolute flex items-center flex-col gap-8 w-[50%]'>
+        <div className='absolute flex items-center flex-col gap-8 w-[80%] lg:w-[50%]'>
           <div className='absolute top-[-20px] left-[49%] p-2 rounded-full bg-yellow-700 w-fit '>
             <Quote color='white' size={15} />
           </div>
           {feedbacks.map((feedback, idx) => (
             <div
               key={idx}
-              className={`text-center shadow-lg shadow-black bg-white rounded-lg p-6 ${
+              className={`text-center shadow-lg shadow-black bg-white rounded-lg p-3 md:p-6 ${
                 idx === currentIndex ? 'opacity-100' : 'opacity-0 hidden'
               } `}
             >
-              <p className='text-lg text-gray-500'>{feedback.comment}</p>
-              <h3 className='font-semibold pt-3 text-xl capitalize'>
+              <p className=' text-sm md:text-md lg:text-lg text-gray-500'>
+                {feedback.comment}
+              </p>
+              <h3 className='font-semibold pt-1 md:pt-3 text-xl capitalize'>
                 {feedback.name}
               </h3>
               <p className='text-sm text-orange-800 capitalize'>
@@ -47,52 +61,66 @@ export default function FeedbackCarousel() {
               </p>
             </div>
           ))}
-          <Swiper
-            effect={'coverflow'}
-            grabCursor={true}
-            centeredSlides={true}
-            loop={true}
-            slidesPerView={5}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 100,
-              modifier: 2.5,
-            }}
-            navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            }}
-            modules={[EffectCoverflow, Navigation]}
-            className='swiper_container'
-          >
-            {feedbacks.map((feedback, idx) => (
-              <SwiperSlide key={idx}>
-                <div
-                  key={idx}
-                  onClick={() => goToComment(idx)}
-                  className='relative mx-3 h-[120px] w-[120px] overflow-hidden rounded-full border-4 border-yellow-700'
-                >
-                  <Image
-                    src={feedback.image}
-                    alt={feedback.name}
-                    layout='fill'
-                    objectFit='cover'
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
+          <div className='w-[80%]'>
+            <Swiper
+              effect={'coverflow'}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              // slidesPerView={5}
+              spaceBetween={30}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+                slideShadows: true,
+              }}
+              navigation={{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }}
+              modules={[EffectCoverflow, Navigation]}
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 5 },
+              }}
+              className='swiper_container flex items-center justify-center'
+            >
+              {feedbacks.map((feedback, idx) => (
+                <SwiperSlide key={idx}>
+                  <div
+                    key={idx}
+                    onClick={() => goToComment(idx)}
+                    className='relative mx-3 h-[80px] lg:h-[120px] w-[80px] lg:w-[120px] overflow-hidden rounded-full border-4 border-yellow-700'
+                  >
+                    <Image
+                      src={feedback.image}
+                      alt={feedback.name}
+                      layout='fill'
+                      objectFit='cover'
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
 
-            <div className=''>
-              <div className='swiper-button-prev hover:scale-150 ease-in-out duration-300'>
-                <ChevronLeft size={10} />
+              <div className=''>
+                <div
+                  onClick={prevFeedback}
+                  className='swiper-button-prev  lg:hover:scale-150 ease-in-out duration-300'
+                >
+                  <ChevronLeft size={10} />
+                </div>
+                <div
+                  onClick={nextFeedback}
+                  className='swiper-button-next  lg:hover:scale-150 ease-in-out duration-300 '
+                >
+                  <ChevronRight size={10} />
+                </div>
+                <div className='swiper-pagination'></div>
               </div>
-              <div className='swiper-button-next '>
-                <ChevronRight />
-              </div>
-              <div className='swiper-pagination'></div>
-            </div>
-          </Swiper>
+            </Swiper>
+          </div>
         </div>
       </div>
     </div>

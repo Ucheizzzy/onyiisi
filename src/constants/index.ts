@@ -30,6 +30,53 @@ export const collections = [
   { name: 'summers', href: '/' },
 ]
 
+// Hero Carousel
+
+export const heroes = [
+  {
+    img: '/Hero.png',
+    color: 'black',
+    desc: '            Discover Exquisite Jewelry Crafted from Pure Gold and Platinum',
+  },
+  {
+    img: '/Hero 2.jpg',
+    color: 'black',
+    desc: '            Discover Exquisite Jewelry Crafted from Pure Gold and Platinum',
+  },
+  {
+    img: '/Hero 3.jpg',
+    color: 'white',
+    desc: '            Discover Exquisite Jewelry Crafted from Pure Gold and Platinum',
+  },
+]
+
+// Guarantees
+
+export const guarantees = [
+  {
+    image: '/Weight.svg',
+    title: 'metal-weight valuation',
+    desc: 'At Onnyiisi, our unique pricing strategy guarantees that the price of our exquisite jewelry is established by the weight of precious metals like gold and platinum.',
+  },
+  {
+    image: '/Signature.svg',
+    title: 'Signature Custom Creations',
+    desc: 'Onnyiisi enables luxury jewelry customization, offering intricate designs and meaningful engravings for a uniquely personalized touch.',
+  },
+  {
+    image: '/Package.svg',
+    title: 'Protected shipping guaranteed',
+    desc: 'In addition to providing timely delivery notifications for peace of mind, our careful packaging guarantees that jewelry pieces are not damaged during transit.',
+  },
+]
+
+// Top Categories
+
+export const topCategories = [
+  { image: '/Trending.jpg', title: 'trending' },
+  { image: '/Limited.jpg', title: 'Limited' },
+]
+
 // products for hero
 
 export const earrings = [
@@ -91,7 +138,36 @@ export const earrings = [
   },
 ]
 
-// products for hero
+// Blog
+
+export const blogs = [
+  {
+    id: '1',
+    img: '/blog img.jpg',
+    date: 'jan 24, 2024',
+    title: 'blog header',
+    details:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias fugit doloribus incidunt deserunt ipsum distinctio culpa labore aperiam, corporis repellendus quod enim id! Dolorem officia provident ab aspernatur pariatur.',
+  },
+  {
+    id: '2',
+    img: '/blog img.jpg',
+    date: 'feb 14, 2024',
+    title: 'blog header',
+    details:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias fugit doloribus incidunt deserunt ipsum distinctio culpa labore aperiam, corporis repellendus quod enim id! Dolorem officia provident ab aspernatur pariatur.',
+  },
+  {
+    id: '3',
+    img: '/blog img.jpg',
+    date: 'mar 10, 2024',
+    title: 'blog header',
+    details:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestias fugit doloribus incidunt deserunt ipsum distinctio culpa labore aperiam, corporis repellendus quod enim id! Dolorem officia provident ab aspernatur pariatur.',
+  },
+]
+
+// products for earrings Page
 
 export const earringsPage = [
   {
@@ -279,11 +355,25 @@ export const feedbacks = [
     image: '/Feedback 1.jpg',
   },
   {
+    name: 'harry reddin',
+    comment:
+      'Lorem ipsum dolor sit amet consetur adipisicing elit. Ea vero iure expedita lauium sunt reiciendis, porro, debitis cumque soluta consequr quo? Ipsam iste, dolorem officia sed odit quas nihil, id autem eos cumque.',
+    verified: 'verified user',
+    image: '/Feedback 3.jpg',
+  },
+  {
     name: 'shelby quan',
     comment:
       'Lorem ipsum dr sit amet consectetur adipisicing elit. Ea vero iure expedita lautium sunt reiciendis, porro, debitis cumque solu consequuntur quo? Ipsam iste, dolorem officia sed odit quas nihil, id autem eos que.',
     verified: 'verified user',
     image: '/Feedback 2.jpg',
+  },
+  {
+    name: 'harry reddin',
+    comment:
+      'Lorem ipsum dolor sit amet consetur adipisicing elit. Ea vero iure expedita lauium sunt reiciendis, porro, debitis cumque soluta consequr quo? Ipsam iste, dolorem officia sed odit quas nihil, id autem eos cumque.',
+    verified: 'verified user',
+    image: '/Feedback 3.jpg',
   },
   {
     name: 'shin fu',
