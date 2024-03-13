@@ -14,12 +14,8 @@ import { useState } from 'react'
 
 export default function FeedbackCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const goToImg = (idx: number) => {
+  const goToComment = (idx: number) => {
     setCurrentIndex(idx)
-  }
-
-  const handleSlideChange = (swiper: Swiper) => {
-    setCurrentIndex(swiper.activeIndex)
   }
 
   return (
@@ -68,14 +64,13 @@ export default function FeedbackCarousel() {
               prevEl: '.swiper-button-prev',
             }}
             modules={[EffectCoverflow, Navigation]}
-            onSlideChange={(swiper: Swiper) => handleSlideChange(swiper)}
             className='swiper_container'
           >
             {feedbacks.map((feedback, idx) => (
               <SwiperSlide key={idx}>
                 <div
                   key={idx}
-                  onClick={() => goToImg(idx)}
+                  onClick={() => goToComment(idx)}
                   className='relative mx-3 h-[120px] w-[120px] overflow-hidden rounded-full border-4 border-yellow-700'
                 >
                   <Image
