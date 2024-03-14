@@ -1,6 +1,6 @@
 import { MoveDownRight } from 'lucide-react'
 import Image from 'next/image'
-import Carousel from './Carousel'
+import SalesCarousel from './SalesCarousel'
 import PopularItems from './PopularItems'
 import Link from 'next/link'
 import { topCategories } from '@/constants'
@@ -46,7 +46,7 @@ export default function Categories() {
         </div>
 
         {/* Carousel */}
-        <Carousel />
+        <SalesCarousel />
         <PopularItems />
       </div>
     </div>

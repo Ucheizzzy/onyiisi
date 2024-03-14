@@ -77,6 +77,32 @@ export const topCategories = [
   { image: '/Limited.jpg', title: 'Limited' },
 ]
 
+// Sales Carousel
+
+export const salesCarousel = [
+  {
+    image: '/70.jpg',
+    title: '-70%',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    type: 'Platinum',
+    price: '674',
+  },
+  {
+    image: '/trendingCarousel.jpg',
+    title: 'trending',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    type: 'Platinum',
+    price: '674',
+  },
+  {
+    image: '/limitedCarousel.jpg',
+    title: 'Limited',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    type: 'Platinum',
+    price: '674',
+  },
+]
+
 // products for hero
 
 export const earrings = [

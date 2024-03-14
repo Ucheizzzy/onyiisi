@@ -3,9 +3,9 @@
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import Image from 'next/image'
 import { feedbacks } from '@/constants'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
+import { EffectCoverflow, Navigation } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
@@ -61,7 +61,7 @@ export default function FeedbackCarousel() {
               </p>
             </div>
           ))}
-          <div className='w-[80%]'>
+          <div className='w-[80%] hidden md:flex'>
             <Swiper
               effect={'coverflow'}
               grabCursor={true}
@@ -103,7 +103,6 @@ export default function FeedbackCarousel() {
                   </div>
                 </SwiperSlide>
               ))}
-
               <div className=''>
                 <div
                   onClick={prevFeedback}
@@ -117,9 +116,38 @@ export default function FeedbackCarousel() {
                 >
                   <ChevronRight size={10} />
                 </div>
-                <div className='swiper-pagination'></div>
+                {/* <div className='swiper-pagination'></div> */}
               </div>
             </Swiper>
+          </div>
+
+          {/* Mobile  */}
+
+          <div className='md:hidden relative flex justify-center items-center w-full'>
+            <div className=''>
+              {feedbacks.map((feedback, idx) => (
+                <div
+                  key={idx}
+                  className={`relative mx-3 h-[150px] w-[150px] overflow-hidden rounded-full border-4 border-yellow-700 ${
+                    idx === currentIndex ? 'opacity-100' : 'opacity-0 hidden'
+                  }
+                `}
+                >
+                  <Image
+                    src={feedback.image}
+                    alt={feedback.name}
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </div>
+              ))}
+            </div>
+            <div onClick={prevFeedback} className=' absolute left-1 '>
+              <ChevronLeft size={50} className='text-white drop-shadow-xl' />
+            </div>
+            <div onClick={nextFeedback} className=' absolute right-1'>
+              <ChevronRight size={50} className='text-white drop-shadow-xl' />
+            </div>
           </div>
         </div>
       </div>

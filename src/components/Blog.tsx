@@ -1,5 +1,4 @@
 import { Mail, MoveDownRight } from 'lucide-react'
-import FeedbackCarousel from './FeedbackCarousel'
 import Image from 'next/image'
 import { blogs } from '@/constants'
 
