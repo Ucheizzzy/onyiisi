@@ -19,7 +19,7 @@ export default function Hero() {
         {guarantees.map((guarantee, idx) => (
           <div
             key={idx}
-            className=' flex-1 text-center flex flex-col gap-5 content-center items-center'
+            className=' flex-1 text-center flex flex-col gap-5 content-center items-center flex-grow'
           >
             <div className='h-20 w-20 relative'>
               <Image

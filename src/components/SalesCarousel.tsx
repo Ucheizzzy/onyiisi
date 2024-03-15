@@ -60,7 +60,7 @@ export default function SalesCarousel() {
               alt={sale.title}
               layout='fill'
               objectFit='cover'
-              className='transform hover:scale-110 transition-transform ease-in-out duration-500'
+              className='transform hover:scale-110 transition-transform ease-in-out duration-500 flex-grow'
             />
             <div className='bg-white absolute left-3 top-6'>
               <p className='px-3 py-[2px]'>{sale.title}</p>

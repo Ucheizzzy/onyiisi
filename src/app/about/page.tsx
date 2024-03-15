@@ -77,7 +77,7 @@ const AboutPage = () => {
         </div>
         <div className='relative w-full md:w-[50%] h-[50%] md:h-full justify-center items-center flex'>
           <Image
-            src='/Customized Elegance.jpeg'
+            src='/Customized elegance.jpeg'
             alt='Customized Elegance'
             layout='fill'
             objectFit='cover'
@@ -149,7 +149,7 @@ const AboutPage = () => {
 
       <div className='relative h-[750px] w-full mt-20'>
         <Image
-          src='/faq bg.jpeg'
+          src='/FAQ bg.jpeg'
           alt='faq bg'
           layout='fill'
           objectFit='cover'

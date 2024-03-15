@@ -17,7 +17,7 @@ export default function Categories() {
           {topCategories.map((category, idx) => (
             <div
               key={idx}
-              className='w-[352px] lg:w-[470px] xl:w-[628px] h-[267px] lg:h-[356px] xl:h-[475px] relative flex justify-center items-center overflow-hidden'
+              className='w-[352px] lg:w-[470px] xl:w-[628px] h-[267px] lg:h-[356px] xl:h-[475px] relative flex justify-center items-center overflow-hidden flex-grow'
             >
               <Link href='/sales/trending'>
                 <Image

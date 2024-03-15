@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { detailsImg } from '@/constants'
 import { ChevronLeft, ChevronRight, Heart, Share2, Star } from 'lucide-react'
 import DetailsDescription from '@/components/DetailsDescription'
@@ -15,6 +15,14 @@ const SingleProductPage = () => {
   const goToImg = (idx: number) => {
     setCurrentIndex(idx)
   }
+
+  // Price
+  const [total, setTotal] = useState(73.4)
+  const [quantity, setQuantity] = useState(1)
+
+  // useEffect(() => {
+  //   setTotal(quantity * 73.4)
+  // }, [quantity])
 
   // Descriptions
 
@@ -87,7 +95,9 @@ const SingleProductPage = () => {
         <div className='flex-1 flex flex-col gap-8 justify-center'>
           <div className='flex flex-col gap-2'>
             <h2 className='text-4xl font-semibold capitalize'>Blue Earrings</h2>
-            <p className='text-orange-800 text-2xl font-semibold'>$674</p>
+            <p className='text-orange-800 text-2xl font-semibold'>
+              ${total.toFixed(2)}
+            </p>
             <p className='text-gray-500 font-thin capitalize'>23.4 Grams</p>
           </div>
           <div className='flex flex-col gap-2'>
@@ -138,7 +148,23 @@ const SingleProductPage = () => {
           <div className='flex flex-col gap-7'>
             <div className='flex justify-between'>
               <p className='text-2xl capitalize'>Quantity</p>
-              <p className='text-2xl'>- 1 +</p>
+              <div className='text-2xl flex'>
+                <button
+                  onClick={() =>
+                    setQuantity((prev) => (prev > 1 ? prev - 1 : 1))
+                  }
+                >
+                  -
+                </button>{' '}
+                <p className='w-10 text-center'>{quantity}</p>{' '}
+                <button
+                  onClick={() =>
+                    setQuantity((next) => (next < 10 ? next + 1 : 10))
+                  }
+                >
+                  +
+                </button>
+              </div>
             </div>
             <button className='text-white bg-orange-800 py-2 lg:py-5 mx-5 rounded-full uppercase font-thin flex items-center justify-center gap-1 lg:gap-2 '>
               add to cart

@@ -310,6 +310,20 @@ export const earringsPage = [
   },
 ]
 
+// Product
+
+export const product = [
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    grade: 'platinum',
+    size: '23.4',
+    price: '674',
+    slug: 'juhfeiorkbdcjc',
+  },
+]
+
 // Earring Details image
 
 export const detailsImg = [
@@ -327,7 +341,8 @@ export const cartItems = [
     desc: 'a twinkling starlight',
     grade: 'platinum',
     size: '23.4',
-    price: '674',
+    price: '67.4',
+    slug: 'juhfeiorkbdcjc',
   },
   {
     img: '/Details Earring.jpg',
@@ -335,7 +350,8 @@ export const cartItems = [
     desc: 'a twinkling starlight',
     grade: 'platinum',
     size: '23.4',
-    price: '674',
+    price: '67.4',
+    slug: 'juhwkdsdcsdcjc',
   },
   {
     img: '/Details Earring.jpg',
@@ -343,7 +359,8 @@ export const cartItems = [
     desc: 'a twinkling starlight',
     grade: 'platinum',
     size: '23.4',
-    price: '674',
+    price: '67.4',
+    slug: 'juhcdjkjdcjc',
   },
   {
     img: '/Details Earring.jpg',
@@ -351,7 +368,8 @@ export const cartItems = [
     desc: 'a twinkling starlight',
     grade: 'platinum',
     size: '23.4',
-    price: '674',
+    price: '67.4',
+    slug: 'juhwejcjc',
   },
   {
     img: '/Details Earring.jpg',
@@ -359,7 +377,8 @@ export const cartItems = [
     desc: 'a twinkling starlight',
     grade: 'platinum',
     size: '23.4',
-    price: '674',
+    price: '67.4',
+    slug: 'juhwejbdcjc',
   },
   {
     img: '/Details Earring.jpg',
@@ -367,7 +386,8 @@ export const cartItems = [
     desc: 'a twinkling starlight',
     grade: 'platinum',
     size: '23.4',
-    price: '674',
+    price: '67.4',
+    slug: 'juhwejbdcjc',
   },
 ]
 
@@ -428,7 +448,25 @@ export const feedbacks = [
 // Product Catalogue
 
 export const products = [
-  { image: '/Lara collection.jpeg', title: 'LARAs Selection' },
+  { image: '/Lara Collection.jpeg', title: 'LARAs Selection' },
   { image: '/Nike Recommends.jpeg', title: 'Nike Recommends' },
   { image: '/More Like.jpeg', title: 'More Like Vogue' },
+]
+
+export const shopCollections = [
+  {
+    image: '/Ombre Collections.jpeg',
+    title: 'Ombre Collection',
+    subtitle: 'Unique Chains',
+  },
+  {
+    image: '/Wedding Collections.jpeg',
+    title: 'Wedding Collection',
+    subtitle: 'Unique Bracelets',
+  },
+  {
+    image: '/Summer Collections.jpeg',
+    title: 'Summer Collection',
+    subtitle: 'Unique Rings',
+  },
 ]

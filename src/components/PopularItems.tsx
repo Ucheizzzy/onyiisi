@@ -28,7 +28,7 @@ export default function PopularItems() {
           >
             <Link href={item.slug}>
               <div className='h-[80%] border-b-[1px] flex items-center justify-center border-gray-400'>
-                <div className='h-[220px] w-[220px] relative'>
+                <div className='h-[220px] w-[220px] relative flex-grow'>
                   <Image
                     src={item.image}
                     alt={item.name}

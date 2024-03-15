@@ -36,7 +36,10 @@ const CartPage = () => {
       <div className='flex-col flex gap-10'>
         {cartItems.map((item, idx) => (
           <div key={idx} className='flex gap-10 items-center'>
-            <div className='relative w-[200px] lg:w-[350px] h-[200px] lg:h-[350px]'>
+            <Link
+              href={`/product/${item.slug}`}
+              className='relative w-[200px] lg:w-[350px] h-[200px] lg:h-[350px]'
+            >
               <Image
                 src={item.img}
                 alt='Earring'
@@ -44,7 +47,7 @@ const CartPage = () => {
                 objectFit='cover'
                 className=' border-2 border-gray-600 rounded-md'
               />
-            </div>
+            </Link>
             <div className='relative flex w-[70%] gap-4 lg:gap-8 flex-col'>
               <div className='flex justify-between'>
                 <div className=''>
