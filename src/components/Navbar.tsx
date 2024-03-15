@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Noto_Sans_Georgian } from 'next/font/google'
 import DropdownSales from './dropdown/DropdownSales'
 import DropdownShop from './dropdown/DropdownShop'
+import Sidebar from './Sidebar'
 
 const georgia = Noto_Sans_Georgian({ subsets: ['latin'] })
 
@@ -30,14 +31,14 @@ export default function Navbar() {
   }
 
   return (
-    <header className='relative'>
+    <header className='relative z-10'>
       <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-black flex justify-between items-center z-20 lg:fixed w-full bg-white'>
         {/* Links  */}
         <div className='hidden md:flex gap-5 lg:gap-10 flex-1 capitalize'>
           <div onMouseEnter={toggleShopDropdown} className=''>
             <Link
               href={'/shop'}
-              onClick={toggleShopDropdown}
+              // onClick={toggleShopDropdown}
               className='cursor-pointer'
             >
               shop
@@ -113,6 +114,13 @@ export default function Navbar() {
         } transition-top ease-in-out duration-300   `}
       >
         <DropdownSales />
+      </div>
+      <div
+        className={`absolute w-full shadow-lg shadow-slate-300 transition-all duration-500 z-10 ${
+          sidebar ? 'top-20' : 'top-[-80px] shadow-none'
+        }`}
+      >
+        <Sidebar />
       </div>
     </header>
   )
