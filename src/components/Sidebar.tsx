@@ -17,7 +17,7 @@ const Sidebar = () => {
       </div>
 
       {/* Navbar Icons  */}
-      <div className='flex-1 flex gap-5 h-[35%] w-full items-center justify-end '>
+      <div className='flex-1 flex gap-5 h-[35%] w-full items-center justify-end px-2 '>
         <Link href='/cart'>
           <ShoppingCart className='cursor-pointer h-5 w-5' />
         </Link>

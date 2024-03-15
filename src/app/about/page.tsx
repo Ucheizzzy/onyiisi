@@ -22,10 +22,10 @@ const AboutPage = () => {
             Elevating Elegance: Discover the Story Behind Onyiisi
           </h1>
           <p className='md:w-[75%]'>
-            "At Onnyiisi, we believe in the transformative power of exquisite
+            At Onnyiisi, we believe in the transformative power of exquisite
             jewelry. Step into our world where craftsmanship meets creativity,
             and every piece tells a story. Learn more about our journey, our
-            passion for luxury, and our commitment to personalized elegance."
+            passion for luxury, and our commitment to personalized elegance.
           </p>
           <button className='text-white bg-orange-800 py-2 px-5 rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
             learn more
@@ -47,7 +47,7 @@ const AboutPage = () => {
           jewelry by infusing it with personal meaning and unparalleled
           craftsmanship. We strive to create timeless pieces that not only
           reflect individual style but also celebrate the unique stories and
-          moments of our customers' lives. With dedication to excellence and a
+          moments of our customers lives. With dedication to excellence and a
           commitment to authenticity, we aim to inspire confidence and elegance
           in every wearer, leaving a lasting impression that transcends trends
           and time
