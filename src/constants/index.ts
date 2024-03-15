@@ -423,3 +423,12 @@ export const feedbacks = [
     image: '/Feedback 3.jpg',
   },
 ]
+
+// About Page
+// Product Catalogue
+
+export const products = [
+  { image: '/Lara collection.jpeg', title: 'LARAs Selection' },
+  { image: '/Nike Recommends.jpeg', title: 'Nike Recommends' },
+  { image: '/More Like.jpeg', title: 'More Like Vogue' },
+]
