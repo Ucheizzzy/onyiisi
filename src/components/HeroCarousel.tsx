@@ -3,6 +3,7 @@
 import { MoveDownRight } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { Button } from './ui/button'
 
 export default function HeroCarousel() {
   const heroes = [
@@ -48,12 +49,12 @@ export default function HeroCarousel() {
           <p className='text-xl lg:text-2xl'>
             Discover Exquisite Jewelry Crafted from Pure Gold and Platinum
           </p>
-          <button className='text-white bg-orange-800 py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+          <Button className='text-white bg-orange-800 py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
             shop now
             <span>
               <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
             </span>
-          </button>
+          </Button>
           <div className='flex gap-1 '>
             {heroes.map((hero, idx) => (
               <button
