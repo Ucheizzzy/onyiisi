@@ -80,7 +80,9 @@ export default function Navbar() {
 
         {/* Navbar Icons  */}
         <div className='flex-1 flex gap-5 lg:scale-100 justify-end'>
-          <Link href={'/studio'}>Studio</Link>
+          <Link href={'/studio'} target='_blank'>
+            Studio
+          </Link>
           <Link href='/cart'>
             <ShoppingCart className='cursor-pointer hidden md:block' />
           </Link>
