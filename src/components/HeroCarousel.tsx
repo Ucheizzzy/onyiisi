@@ -4,14 +4,9 @@ import { MoveDownRight } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Button } from './ui/button'
+import { heroes } from '@/constants'
 
 export default function HeroCarousel() {
-  const heroes = [
-    { img: '/Hero.png' },
-    { img: '/Hero 2.jpg' },
-    { img: '/Hero 3.jpg' },
-  ]
-
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -21,7 +16,7 @@ export default function HeroCarousel() {
       10000
     )
     return () => clearInterval(interval)
-  }, [])
+  }, [heroes.length])
 
   const goToHero = (idx: number) => {
     setCurrentIndex(idx)
@@ -29,7 +24,7 @@ export default function HeroCarousel() {
 
   return (
     <div className=''>
-      <div className='w-full h-[400px] md:h-[480px] lg:h-[680px] xl:h-[729px] relative my-5 lg:my-10 z-0 duration-1000 '>
+      <div className='w-full h-[300px] md:h-[480px] lg:h-[680px] xl:h-[729px] relative my-5 lg:my-10 z-0 duration-1000 '>
         {heroes.map((hero, idx) => (
           <div
             className={`  transition-opacity duration-1000 ${
@@ -40,8 +35,8 @@ export default function HeroCarousel() {
             <Image
               src={hero.img}
               alt='Hero Onyiisi'
-              layout='fill'
-              objectFit='cover'
+              width={1500}
+              height={1500}
             />
           </div>
         ))}

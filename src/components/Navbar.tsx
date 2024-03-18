@@ -1,11 +1,12 @@
 'use client'
 
-import { ShoppingCart, Heart, UserRound } from 'lucide-react'
+import { ShoppingCart, Heart, UserRound, Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Noto_Sans_Georgian } from 'next/font/google'
 import DropdownSales from './dropdown/DropdownSales'
 import DropdownShop from './dropdown/DropdownShop'
+import Sidebar from './Sidebar'
 
 const georgia = Noto_Sans_Georgian({ subsets: ['latin'] })
 
@@ -22,15 +23,22 @@ export default function Navbar() {
     setShopDropDown(false)
   }
 
+  // Sidebar function
+  const [sidebar, setSidebar] = useState(false)
+
+  const handleSidebar = () => {
+    setSidebar(!sidebar)
+  }
+
   return (
-    <header className='relative'>
-      <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-black flex justify-around items-center z-20 lg:fixed w-full bg-white'>
+    <header className='relative z-10'>
+      <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-black flex justify-between items-center z-20 lg:fixed w-full bg-white'>
         {/* Links  */}
-        <div className='flex gap-5 lg:gap-10 flex-1 capitalize'>
+        <div className='hidden md:flex gap-5 lg:gap-10 flex-1 capitalize'>
           <div onMouseEnter={toggleShopDropdown} className=''>
             <Link
               href={'/shop'}
-              onClick={toggleShopDropdown}
+              // onClick={toggleShopDropdown}
               className='cursor-pointer'
             >
               shop
@@ -49,6 +57,15 @@ export default function Navbar() {
           </Link>
         </div>
 
+        {/* Side Bar  */}
+        <div onClick={handleSidebar} className='md:hidden flex-1'>
+          {sidebar ? (
+            <X className='w-10 h-10' />
+          ) : (
+            <Menu className='w-10 h-10' />
+          )}
+        </div>
+
         {/* Logo  */}
         <div className='flex-1'>
           <Link href='/'>
@@ -62,13 +79,13 @@ export default function Navbar() {
         </div>
 
         {/* Navbar Icons  */}
-        <div className='flex-1 flex gap-5 scale-75 lg:scale-100 justify-end'>
+        <div className='flex-1 flex gap-5 lg:scale-100 justify-end'>
           <Link href={'/studio'}>Studio</Link>
           <Link href='/cart'>
-            <ShoppingCart className='cursor-pointer' />
+            <ShoppingCart className='cursor-pointer hidden md:block' />
           </Link>
           <Link href='/wish-list'>
-            <Heart className='cursor-pointer' />
+            <Heart className='cursor-pointer hidden md:block' />
           </Link>
           <Link href='/login'>
             <UserRound className='cursor-pointer' />
@@ -98,6 +115,13 @@ export default function Navbar() {
         } transition-top ease-in-out duration-300   `}
       >
         <DropdownSales />
+      </div>
+      <div
+        className={`absolute w-full shadow-lg shadow-slate-300 transition-all duration-500 z-10 ${
+          sidebar ? 'top-20' : 'top-[-80px] shadow-none'
+        }`}
+      >
+        <Sidebar />
       </div>
     </header>
   )
