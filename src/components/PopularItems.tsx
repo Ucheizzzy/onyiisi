@@ -33,7 +33,6 @@ export default function PopularItems() {
                     src={item.image}
                     alt={item.name}
                     fill
-                    objectFit='contain'
                   />
                 </div>
               </div>

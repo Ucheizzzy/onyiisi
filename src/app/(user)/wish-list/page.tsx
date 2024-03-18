@@ -43,7 +43,6 @@ const WishListPage = () => {
                   src={item.img}
                   alt='Earring'
                   fill
-                  objectFit='cover'
                   className=' border-2 border-gray-600 rounded-md'
                 />
               </div>

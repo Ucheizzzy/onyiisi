@@ -12,7 +12,6 @@ const RelatedProducts = () => {
               src='/70.jpg'
               alt='percent cut'
               fill
-              objectFit='cover'
               className='rounded-xl'
             />
             <div className='bg-white absolute left-3 top-6'>
@@ -33,7 +32,6 @@ const RelatedProducts = () => {
               src='/trendingCarousel.jpg'
               alt='trending'
               fill
-              objectFit='cover'
               className='rounded-xl'
             />
             <div className='bg-white absolute left-3 top-6'>
@@ -54,7 +52,6 @@ const RelatedProducts = () => {
               src='/limitedCarousel.jpg'
               alt='limited'
               fill
-              objectFit='cover'
               className='rounded-xl'
             />
             <div className='bg-white absolute left-3 top-6'>

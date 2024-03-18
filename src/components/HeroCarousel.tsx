@@ -3,10 +3,11 @@
 import { MoveDownRight } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { Button } from './ui/button'
 import { heroes } from '@/constants'
+import { BannerProps } from '@/lib/types'
+import { urlFor } from '@/lib/sanity-client'
 
-export default function HeroCarousel() {
+export default function HeroCarousel({ banners }: { banners: BannerProps[] }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function HeroCarousel() {
   return (
     <div className=''>
       <div className='w-full h-[300px] md:h-[480px] lg:h-[680px] xl:h-[729px] relative my-5 lg:my-10 z-0 duration-1000 '>
-        {heroes.map((hero, idx) => (
+        {banners.map((item, idx) => (
           <div
             className={`  transition-opacity duration-1000 ${
               idx === currentIndex ? 'opacity-100' : 'opacity-0'
@@ -33,23 +34,30 @@ export default function HeroCarousel() {
             key={idx}
           >
             <Image
-              src={hero.img}
+              src={urlFor(item.image).url()}
               alt='Hero Onyiisi'
-              width={1500}
-              height={1500}
+              fill
             />
           </div>
         ))}
-        <div className='absolute bottom-9 md:bottom-11 lg:bottom-20 left-9 md:left-11 lg:left-20 w-[250px] md:w-[350px] lg:w-[500px] flex flex-col gap-5'>
-          <p className='text-xl lg:text-2xl'>
-            Discover Exquisite Jewelry Crafted from Pure Gold and Platinum
-          </p>
-          <Button className='text-white bg-orange-800 py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+        <div className='absolute bottom-6 md:bottom-11 lg:bottom-20 left-6 md:left-11 lg:left-20 w-[250px] md:w-[350px] lg:w-[500px] flex flex-col gap-5'>
+          {heroes.map((hero, idx) => (
+            <p
+              key={idx}
+              className={`text-xl lg:text-2xl ${
+                idx === currentIndex ? 'opacity-100' : 'opacity-0 hidden'
+              }`}
+              style={{ color: hero.color }}
+            >
+              {hero.desc}
+            </p>
+          ))}
+          <button className='text-white bg-orange-800 py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
             shop now
             <span>
               <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
             </span>
-          </Button>
+          </button>
           <div className='flex gap-1 '>
             {heroes.map((hero, idx) => (
               <button

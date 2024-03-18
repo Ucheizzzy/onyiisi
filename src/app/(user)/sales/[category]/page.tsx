@@ -14,7 +14,6 @@ const SalesCategoryPage = () => {
               src='/Earrings Page.jpg'
               alt='Earrings'
               fill
-              objectFit='cover'
             />
             <h2 className=' absolute top-10 left-10 uppercase text-3xl font-thin text-white'>
               trending

@@ -38,7 +38,6 @@ export default function Blog() {
                   src={blog.img}
                   alt={blog.title}
                   fill
-                  objectFit='cover'
                 />
               </div>
               <div className=''>

@@ -33,12 +33,7 @@ export default function FeedbackCarousel() {
   return (
     <div className='mb-10'>
       <div className='relative flex justify-center items-center w-full h-[500px] md:h-[400px] lg:h-[594px]'>
-        <Image
-          src='/Feedback bg.jpg'
-          alt='Feedback BG'
-          layout='fill'
-          objectFit='cover'
-        />
+        <Image src='/Feedback bg.jpg' alt='Feedback BG' fill />
         <div className='absolute flex items-center flex-col gap-8 w-[80%] lg:w-[50%]'>
           <div className='absolute top-[-20px] left-[49%] p-2 rounded-full bg-yellow-700 w-fit '>
             <Quote color='white' size={15} />
@@ -94,12 +89,7 @@ export default function FeedbackCarousel() {
                     onClick={() => goToComment(idx)}
                     className='relative mx-3 h-[80px] lg:h-[120px] w-[80px] lg:w-[120px] overflow-hidden rounded-full border-4 border-yellow-700'
                   >
-                    <Image
-                      src={feedback.image}
-                      alt={feedback.name}
-                      fill
-                      objectFit='cover'
-                    />
+                    <Image src={feedback.image} alt={feedback.name} fill />
                   </div>
                 </SwiperSlide>
               ))}
@@ -133,12 +123,7 @@ export default function FeedbackCarousel() {
                   }
                 `}
                 >
-                  <Image
-                    src={feedback.image}
-                    alt={feedback.name}
-                    fill
-                    objectFit='cover'
-                  />
+                  <Image src={feedback.image} alt={feedback.name} fill />
                 </div>
               ))}
             </div>

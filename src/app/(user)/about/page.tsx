@@ -14,7 +14,6 @@ const AboutPage = () => {
           src='/About Hero.jpeg'
           alt='about'
           fill
-          objectFit='cover'
           className='brightness-75'
         />
         <div className='absolute text-white flex flex-col justify-center items-center gap-2 w-[98%] md:w-[80%] lg:w-[70%] text-center '>
@@ -62,7 +61,6 @@ const AboutPage = () => {
             src='/Sparkling Brilliance.jpeg'
             alt='Sparkling Brilliance'
             fill
-            objectFit='cover'
             className='brightness-75'
           />
           <div className='absolute text-center w-[80%]'>
@@ -80,7 +78,6 @@ const AboutPage = () => {
             src='/Customized elegance.jpeg'
             alt='Customized Elegance'
             fill
-            objectFit='cover'
             className='brightness-75'
           />
           <div className='absolute text-center w-[80%]'>
@@ -112,7 +109,6 @@ const AboutPage = () => {
             src='/Gift Someone.jpeg'
             alt='Gift Someone'
             fill
-            objectFit='cover'
           />
         </div>
       </div>
@@ -132,7 +128,6 @@ const AboutPage = () => {
                   src={product.image}
                   alt={product.title}
                   fill
-                  objectFit='cover'
                   className='hover:scale-110 transition-all duration-300'
                 />
               </div>
@@ -148,7 +143,7 @@ const AboutPage = () => {
       {/* FAQ  */}
 
       <div className='relative h-[750px] w-full mt-20'>
-        <Image src='/FAQ bg.jpeg' alt='faq bg' fill objectFit='cover' />
+        <Image src='/FAQ bg.jpeg' alt='faq bg' fill />
       </div>
 
       {/* Blog  */}
@@ -168,15 +163,14 @@ const AboutPage = () => {
             <Image
               src='/socials.jpeg'
               alt='socials'
-              layout='fill'
-              objectFit='cover'
+              fill
             />
           </div>
           <div className='relative h-[308px] md:h-[250px] xl:h-[318px] w-[290px] xl:w-[300px] rounded-md overflow-hidden'>
-            <Image src='/socials.jpeg' alt='socials' fill objectFit='cover' />
+            <Image src='/socials.jpeg' alt='socials' fill />
           </div>
           <div className='relative h-[308px] md:h-[250px] xl:h-[318px] w-[290px] xl:w-[300px] rounded-md overflow-hidden'>
-            <Image src='/socials.jpeg' alt='socials' fill objectFit='cover' />
+            <Image src='/socials.jpeg' alt='socials' fill  />
           </div>
         </div>
       </div>

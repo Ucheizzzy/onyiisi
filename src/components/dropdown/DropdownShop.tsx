@@ -1,8 +1,26 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { categories, specials, collections } from '@/constants'
+import { specials, collections } from '@/constants'
+import { type CategoriesProps } from '@/lib/types'
+import { useEffect, useState } from 'react'
+import { categories } from '@/lib/sanity-client'
 
 export default function DropdownShop() {
+  const [categoryData, setCategoryData] = useState<CategoriesProps[]>([])
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const categoryData = await categories()
+        setCategoryData(categoryData)
+      } catch (error) {
+        console.log(console.error('Error fetching category data:', error))
+      }
+    }
+    fetchCategories()
+  }, [])
+
   return (
     <div className=''>
       <div
@@ -15,12 +33,7 @@ export default function DropdownShop() {
       >
         <div className='flex-1 flex items-center gap-6 lg:gap-10 '>
           <div className='w-[150px] lg:w-[202px] h-[108px] lg:h-[144px] relative rounded-md mr-14'>
-            <Image
-              src='/shop.png'
-              fill
-              objectFit='cover'
-              alt='shop image'
-            />
+            <Image src='/shop.png' width={350} height={350} alt='shop image' />
           </div>
           <div className='flex-4 flex gap-[60px] lg:gap-[120px]'>
             <div className=''>
@@ -28,9 +41,11 @@ export default function DropdownShop() {
                 categories
               </h1>
               <ul className='text-center uppercase flex flex-col gap-2'>
-                {categories.map((category, idx) => (
+                {categoryData?.map((category, idx) => (
                   <li key={idx}>
-                    <Link href={category.href}>{category.name}</Link>
+                    <Link href={category?.title} className=''>
+                      {category?.title}
+                    </Link>
                   </li>
                 ))}
               </ul>

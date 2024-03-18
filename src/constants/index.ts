@@ -36,17 +36,17 @@ export const heroes = [
   {
     img: '/Hero.png',
     color: 'black',
-    desc: '            Discover Exquisite Jewelry Crafted from Pure Gold and Platinum',
+    desc: 'Discover Exquisite Jewelry Crafted from Pure Gold and Platinum',
   },
   {
     img: '/Hero 2.jpg',
     color: 'black',
-    desc: '            Discover Exquisite Jewelry Crafted from Pure Gold and Platinum',
+    desc: 'Discover Exquisite Jewelry Crafted from Pure Gold and Platinum',
   },
   {
     img: '/Hero 3.jpg',
     color: 'white',
-    desc: '            Discover Exquisite Jewelry Crafted from Pure Gold and Platinum',
+    desc: 'Discover Exquisite Jewelry Crafted from Pure Gold and Platinum',
   },
 ]
 

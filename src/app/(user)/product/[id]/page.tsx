@@ -63,7 +63,6 @@ const SingleProductPage = () => {
                 src={img.img}
                 alt='Earring'
                 fill
-                objectFit='cover'
                 className={`absolute rounded-md ${img.trans}`}
               />
             </div>
@@ -79,7 +78,6 @@ const SingleProductPage = () => {
                   src={img.img}
                   alt='Earrings'
                   fill
-                  objectFit='cover'
                   className={`rounded-md ${img.trans}`}
                 />
               </div>

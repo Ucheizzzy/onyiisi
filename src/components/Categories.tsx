@@ -24,7 +24,6 @@ export default function Categories() {
                   src={category.image}
                   alt={category.title}
                   fill
-                  objectFit='cover'
                   className=' transform hover:scale-110 transition-transform ease-in-out duration-500'
                 />
               </Link>

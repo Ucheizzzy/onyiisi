@@ -18,7 +18,6 @@ export default function DropdownSales() {
             <Image
               src='/sales.png'
               fill
-              objectFit='cover'
               alt='sales image'
             />
           </div>

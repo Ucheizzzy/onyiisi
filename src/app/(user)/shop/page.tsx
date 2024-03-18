@@ -9,12 +9,7 @@ const ShopPage = () => {
     <div>
       {/* Shop Hero  */}
       <div className='relative h-[400px] lg:h-[580px] xl:h-[790px] w-full mb-20'>
-        <Image
-          src='/Shop Hero.jpeg'
-          alt='Shop Hero'
-          fill
-          objectFit='cover'
-        />
+        <Image src='/Shop Hero.jpeg' alt='Shop Hero' fill />
       </div>
 
       {/* Collections  */}
@@ -27,8 +22,8 @@ const ShopPage = () => {
             <Image
               src={shop.image}
               alt='ombre collections'
-              fill
-              objectFit='cover'
+              width={500}
+              height={500}
               className='brightness-75'
             />
             <div className='absolute text-white text-center'>
@@ -49,7 +44,6 @@ const ShopPage = () => {
             src='/Categories Bracelets.jpeg'
             alt='Bracelet'
             fill
-            objectFit='cover'
             className='brightness-75'
           />
           <div className='absolute'>
@@ -71,7 +65,6 @@ const ShopPage = () => {
               src='/Categories Rings.jpeg'
               alt='Rings'
               fill
-              objectFit='cover'
               className='brightness-75'
             />
             <div className='absolute'>
@@ -92,7 +85,6 @@ const ShopPage = () => {
               src='/Categories Earings.jpeg'
               alt='Earings'
               fill
-              objectFit='cover'
               className='brightness-75'
             />
             <div className='absolute'>
@@ -115,7 +107,6 @@ const ShopPage = () => {
               src='/Categories Chains.jpeg'
               alt='chains'
               fill
-              objectFit='cover'
               className='brightness-75'
             />
             <div className='absolute'>
@@ -136,7 +127,6 @@ const ShopPage = () => {
               src='/Categories Charms.jpeg'
               alt='Charms'
               fill
-              objectFit='cover'
               className='brightness-75'
             />
             <div className='absolute'>
@@ -206,7 +196,6 @@ const ShopPage = () => {
           src='/Customize Jewelry.jpeg'
           alt='Customize'
           fill
-          objectFit='cover'
           className='brightness-75'
         />
         <div className='text-white text-center absolute flex flex-col items-center justify-center gap-4'>
