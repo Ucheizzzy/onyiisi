@@ -42,7 +42,7 @@ const WishListPage = () => {
                 <Image
                   src={item.img}
                   alt='Earring'
-                  layout='fill'
+                  fill
                   objectFit='cover'
                   className=' border-2 border-gray-600 rounded-md'
                 />
@@ -66,11 +66,13 @@ const WishListPage = () => {
                   <div className='flex justify-between items-center'>
                     <button className='flex gap-1 text-orange-800 font-semibold'>
                       {' '}
-                      <ShoppingCart /> Add to Cart
+                      <ShoppingCart />{' '}
+                      <span className='hidden md:flex'>Add to Cart</span>
                     </button>
                     <button className='flex gap-1 text-gray-500 text-sm'>
                       {' '}
-                      <Trash size={18} /> Remove
+                      <Trash size={18} />{' '}
+                      <span className='hidden md:flex'>Remove</span>
                     </button>
                   </div>
                 </div>
@@ -81,11 +83,11 @@ const WishListPage = () => {
 
         {/* CheckOut  */}
         <div className='flex flex-col items-center'>
-          <div className='m-10 rounded-md w-[80%] lg:w-[70%] flex justify-between bg-gray-200 p-4'>
+          <div className='m-10 rounded-md w-[95%] md:w-[80%] lg:w-[70%] flex justify-between bg-gray-200 p-4'>
             <p className='uppercase text-gray-500 text-xl'>item subtotal</p>
             <p className='text-xl'>$674</p>
           </div>
-          <button className='text-white bg-orange-800 py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
+          <button className='text-white bg-orange-800 py-2 lg:py-3 w-[90%] md:w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
             add all to cart
           </button>
         </div>

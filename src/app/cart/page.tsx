@@ -72,11 +72,13 @@ const CartPage = () => {
                 <div className='flex justify-between items-center'>
                   <button className='flex gap-1 text-orange-800 font-semibold'>
                     {' '}
-                    <Heart /> Move to Wishlist
+                    <Heart />{' '}
+                    <span className='hidden md:flex'>Move to Wishlist</span>
                   </button>
                   <button className='flex gap-1 text-gray-500 text-sm'>
                     {' '}
-                    <Trash size={18} /> Remove
+                    <Trash size={18} />{' '}
+                    <span className='hidden md:flex'>Remove</span>
                   </button>
                 </div>
               </div>
@@ -87,11 +89,11 @@ const CartPage = () => {
 
       {/* CheckOut  */}
       <div className='flex flex-col items-center'>
-        <div className='m-10 rounded-md w-[80%] lg:w-[70%] flex justify-between bg-gray-200 p-4'>
+        <div className='m-10 rounded-md w-[95%] md:w-[80%] lg:w-[70%] flex justify-between bg-gray-200 p-4'>
           <p className='uppercase text-gray-500 text-xl'>item subtotal</p>
           <p className='text-xl'>$674</p>
         </div>
-        <button className='text-white bg-orange-800 py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
+        <button className='text-white bg-orange-800 py-2 lg:py-3 w-[90%] md:w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
           proceed to checkout
         </button>
         <p className='uppercase font-semibold underline py-5 underline-offset-8 text-gray-800'>

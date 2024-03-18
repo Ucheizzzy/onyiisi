@@ -23,7 +23,7 @@ const CategoryPage = () => {
 
         <div className='px-5 lg:px-20 py-10'>
           {/* Navigation */}
-          <div className='flex px-10 justify-between items-center'>
+          <div className='flex md:px-10 justify-between items-center'>
             <div className='flex gap-1'>
               <Link className='text-gray-400 hover:text-gray-800' href='/'>
                 Home |{' '}
@@ -33,7 +33,7 @@ const CategoryPage = () => {
               </Link>
               <p className='font-semibold'> Earrings</p>
             </div>
-            <div className=''>
+            <div className='hidden md:flex'>
               <p className='text-gray-400'>
                 View:{' '}
                 <span className='text-gray-800 underline hover:underline cursor-pointer'>
@@ -56,11 +56,11 @@ const CategoryPage = () => {
           </div>
 
           {/* Products  */}
-          <div className='flex flex-wrap flex-grow gap-10 lg:gap-14 my-10 justify-center'>
+          <div className='flex flex-wrap flex-grow gap-10 lg:gap-14 my-10 mx-5 justify-center'>
             {earringsPage.map((item) => (
               <div
                 key={item.index}
-                className=' bg-[rgb(230,230,230)] rounded-md text-center h-[220px] lg:h-[280px] 2xl:h-[300px] w-[190px] lg:w-[250px] 2xl:w-[280px]'
+                className=' bg-[rgb(230,230,230)] rounded-md text-center h-[350px] md:h-[220px] lg:h-[280px] 2xl:h-[300px] w-[320px] md:w-[190px] lg:w-[250px] 2xl:w-[280px] flex-grow'
               >
                 <Link href={item.slug}>
                   <div className='h-[80%] border-b-[1px] flex items-center justify-center border-gray-400 relative'>
