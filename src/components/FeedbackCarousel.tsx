@@ -36,7 +36,7 @@ export default function FeedbackCarousel() {
         <Image
           src='/Feedback bg.jpg'
           alt='Feedback BG'
-          layout='fill'
+          fill
           objectFit='cover'
         />
         <div className='absolute flex items-center flex-col gap-8 w-[80%] lg:w-[50%]'>
@@ -46,7 +46,7 @@ export default function FeedbackCarousel() {
           {feedbacks.map((feedback, idx) => (
             <div
               key={idx}
-              className={`text-center shadow-lg shadow-black bg-white rounded-lg p-3 md:p-6 ${
+              className={`text-center shadow-sm shadow-black bg-white rounded-lg p-3 md:p-6 ${
                 idx === currentIndex ? 'opacity-100' : 'opacity-0 hidden'
               } `}
             >
@@ -97,7 +97,7 @@ export default function FeedbackCarousel() {
                     <Image
                       src={feedback.image}
                       alt={feedback.name}
-                      layout='fill'
+                      fill
                       objectFit='cover'
                     />
                   </div>
@@ -136,7 +136,7 @@ export default function FeedbackCarousel() {
                   <Image
                     src={feedback.image}
                     alt={feedback.name}
-                    layout='fill'
+                    fill
                     objectFit='cover'
                   />
                 </div>

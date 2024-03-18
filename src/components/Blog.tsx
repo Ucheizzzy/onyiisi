@@ -37,7 +37,7 @@ export default function Blog() {
                   className=' rounded-md pb-5  '
                   src={blog.img}
                   alt={blog.title}
-                  layout='fill'
+                  fill
                   objectFit='cover'
                 />
               </div>

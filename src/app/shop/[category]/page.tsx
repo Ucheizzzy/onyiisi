@@ -1,4 +1,5 @@
 import { earringsPage } from '@/constants'
+import { Heart, Plus } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -12,7 +13,7 @@ const CategoryPage = () => {
           <Image
             src='/Earrings Page.jpg'
             alt='Earrings'
-            layout='fill'
+            fill
             objectFit='cover'
           />
           <h2 className=' absolute top-10 left-10 uppercase text-3xl font-thin text-white'>
@@ -35,11 +36,17 @@ const CategoryPage = () => {
             <div className=''>
               <p className='text-gray-400'>
                 View:{' '}
-                <span className='text-gray-800 underline cursor-pointer'>
+                <span className='text-gray-800 underline hover:underline cursor-pointer'>
                   16
                 </span>{' '}
-                / <span className='text-gray-800 cursor-pointer'>32</span> /{' '}
-                <span className='text-gray-800 cursor-pointer'>ALL</span>{' '}
+                /{' '}
+                <span className='text-gray-400 cursor-pointer hover:text-gray-800 hover:underline'>
+                  32
+                </span>{' '}
+                /{' '}
+                <span className='text-gray-400 cursor-pointer hover:underline hover:text-gray-800'>
+                  ALL
+                </span>{' '}
               </p>
             </div>
             <div className='flex gap-5'>
@@ -56,13 +63,23 @@ const CategoryPage = () => {
                 className=' bg-[rgb(230,230,230)] rounded-md text-center h-[220px] lg:h-[280px] 2xl:h-[300px] w-[190px] lg:w-[250px] 2xl:w-[280px]'
               >
                 <Link href={item.slug}>
-                  <div className='h-[80%] border-b-[1px] flex items-center justify-center border-gray-400'>
+                  <div className='h-[80%] border-b-[1px] flex items-center justify-center border-gray-400 relative'>
                     <Image
                       src={item.image}
                       alt={item.name}
                       height={150}
                       width={150}
                     />
+                    <div className='absolute w-full h-full flex justify-between p-4 opacity-0 hover:opacity-100 transition-all duration-300'>
+                      <div className='w-10 h-10 bg-orange-800 rounded-md text-white flex justify-center items-center'>
+                        {' '}
+                        <Heart />{' '}
+                      </div>
+                      <div className='w-10 h-10 bg-orange-800 rounded-md text-white flex justify-center items-center'>
+                        {' '}
+                        <Plus />{' '}
+                      </div>
+                    </div>
                   </div>
                 </Link>
                 <div className='pt-1'>

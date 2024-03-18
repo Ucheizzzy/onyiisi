@@ -32,6 +32,14 @@ export default function Navbar() {
 
   return (
     <header className='relative z-10'>
+      {' '}
+      <div
+        className={`absolute w-full shadow-lg shadow-slate-300 transition-all duration-500 h-[100vh] z-10 ${
+          sidebar ? 'top-0 left-0' : 'top-0 left-[-500px] shadow-none'
+        }`}
+      >
+        <Sidebar />
+      </div>
       <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-black flex justify-between items-center z-20 lg:fixed w-full bg-white'>
         {/* Links  */}
         <div className='hidden md:flex gap-5 lg:gap-10 flex-1 capitalize'>
@@ -58,9 +66,9 @@ export default function Navbar() {
         </div>
 
         {/* Side Bar  */}
-        <div onClick={handleSidebar} className='md:hidden flex-1'>
+        <div onClick={handleSidebar} className='md:hidden flex-1 z-20'>
           {sidebar ? (
-            <X className='w-10 h-10' />
+            <X className='w-10 h-10 text-white' />
           ) : (
             <Menu className='w-10 h-10' />
           )}
@@ -91,7 +99,6 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-
       {/* Dropdown */}
       {/* {shopDropDown ? <DropdownShop /> : ''}
       {salesDropDown ? <DropdownSales /> : ''} */}
@@ -114,13 +121,6 @@ export default function Navbar() {
         } transition-top ease-in-out duration-300   `}
       >
         <DropdownSales />
-      </div>
-      <div
-        className={`absolute w-full shadow-lg shadow-slate-300 transition-all duration-500 z-10 ${
-          sidebar ? 'top-20' : 'top-[-80px] shadow-none'
-        }`}
-      >
-        <Sidebar />
       </div>
     </header>
   )

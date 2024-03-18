@@ -13,7 +13,7 @@ const AboutPage = () => {
         <Image
           src='/About Hero.jpeg'
           alt='about'
-          layout='fill'
+          fill
           objectFit='cover'
           className='brightness-75'
         />
@@ -61,7 +61,7 @@ const AboutPage = () => {
           <Image
             src='/Sparkling Brilliance.jpeg'
             alt='Sparkling Brilliance'
-            layout='fill'
+            fill
             objectFit='cover'
             className='brightness-75'
           />
@@ -79,7 +79,7 @@ const AboutPage = () => {
           <Image
             src='/Customized elegance.jpeg'
             alt='Customized Elegance'
-            layout='fill'
+            fill
             objectFit='cover'
             className='brightness-75'
           />
@@ -111,7 +111,7 @@ const AboutPage = () => {
           <Image
             src='/Gift Someone.jpeg'
             alt='Gift Someone'
-            layout='fill'
+            fill
             objectFit='cover'
           />
         </div>
@@ -131,7 +131,7 @@ const AboutPage = () => {
                 <Image
                   src={product.image}
                   alt={product.title}
-                  layout='fill'
+                  fill
                   objectFit='cover'
                   className='hover:scale-110 transition-all duration-300'
                 />
@@ -147,13 +147,18 @@ const AboutPage = () => {
 
       {/* FAQ  */}
 
-      <div className='relative h-[750px] w-full mt-20'>
+      <div className='relative flex justify-center items-center h-[750px] w-full mt-20'>
         <Image
           src='/FAQ bg.jpeg'
           alt='faq bg'
           layout='fill'
           objectFit='cover'
         />
+        <div className='absolute rounded-lg p-16 bg-white'>
+          <h1 className='text-4xl font-bold uppercase text-center'>
+            frequently asked questions
+          </h1>
+        </div>
       </div>
 
       {/* Blog  */}
@@ -167,36 +172,16 @@ const AboutPage = () => {
         </h1>
         <div className='flex flex-col md:flex-row items-center md:justify-between gap-3 '>
           <div className='relative h-[308px] md:h-[250px] xl:h-[318px] w-[290px] xl:w-[300px] rounded-md overflow-hidden'>
-            <Image
-              src='/socials.jpeg'
-              alt='socials'
-              layout='fill'
-              objectFit='cover'
-            />
+            <Image src='/socials.jpeg' alt='socials' fill objectFit='cover' />
           </div>
           <div className='relative h-[308px] md:h-[250px] xl:h-[318px] w-[290px] xl:w-[300px] rounded-md overflow-hidden'>
-            <Image
-              src='/socials.jpeg'
-              alt='socials'
-              layout='fill'
-              objectFit='cover'
-            />
+            <Image src='/socials.jpeg' alt='socials' fill objectFit='cover' />
           </div>
           <div className='relative h-[308px] md:h-[250px] xl:h-[318px] w-[290px] xl:w-[300px] rounded-md overflow-hidden'>
-            <Image
-              src='/socials.jpeg'
-              alt='socials'
-              layout='fill'
-              objectFit='cover'
-            />
+            <Image src='/socials.jpeg' alt='socials' fill objectFit='cover' />
           </div>
           <div className='relative h-[308px] md:h-[250px] xl:h-[318px] w-[290px] xl:w-[300px] rounded-md overflow-hidden'>
-            <Image
-              src='/socials.jpeg'
-              alt='socials'
-              layout='fill'
-              objectFit='cover'
-            />
+            <Image src='/socials.jpeg' alt='socials' fill objectFit='cover' />
           </div>
         </div>
       </div>

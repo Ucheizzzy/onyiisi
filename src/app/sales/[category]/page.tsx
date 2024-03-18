@@ -13,7 +13,7 @@ const SalesCategoryPage = () => {
             <Image
               src='/Earrings Page.jpg'
               alt='Earrings'
-              layout='fill'
+              fill
               objectFit='cover'
             />
             <h2 className=' absolute top-10 left-10 uppercase text-3xl font-thin text-white'>

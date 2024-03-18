@@ -28,7 +28,7 @@ export default function SalesCarousel() {
             <Image
               src={sale.image}
               alt={sale.title}
-              layout='fill'
+              fill
               objectFit='cover'
               className='transform hover:scale-110 transition-transform ease-in-out duration-500'
             />
@@ -58,7 +58,7 @@ export default function SalesCarousel() {
             <Image
               src={sale.image}
               alt={sale.title}
-              layout='fill'
+              fill
               objectFit='cover'
               className='transform hover:scale-110 transition-transform ease-in-out duration-500 flex-grow'
             />

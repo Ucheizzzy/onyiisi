@@ -31,12 +31,7 @@ export default function HeroCarousel() {
             } `}
             key={idx}
           >
-            <Image
-              src={hero.img}
-              alt='Hero Onyiisi'
-              layout='fill'
-              objectFit='cover'
-            />
+            <Image src={hero.img} alt='Hero Onyiisi' fill objectFit='cover' />
           </div>
         ))}
         <div className='absolute bottom-6 md:bottom-11 lg:bottom-20 left-6 md:left-11 lg:left-20 w-[250px] md:w-[350px] lg:w-[500px] flex flex-col gap-5'>

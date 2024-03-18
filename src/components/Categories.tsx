@@ -23,7 +23,7 @@ export default function Categories() {
                 <Image
                   src={category.image}
                   alt={category.title}
-                  layout='fill'
+                  fill
                   objectFit='cover'
                   className=' transform hover:scale-110 transition-transform ease-in-out duration-500'
                 />

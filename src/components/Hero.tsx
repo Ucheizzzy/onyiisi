@@ -25,7 +25,7 @@ export default function Hero() {
               <Image
                 src={guarantee.image}
                 alt={guarantee.title}
-                layout='fill'
+                fill
                 objectFit='contain'
               />
             </div>

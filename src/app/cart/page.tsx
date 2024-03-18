@@ -43,7 +43,7 @@ const CartPage = () => {
               <Image
                 src={item.img}
                 alt='Earring'
-                layout='fill'
+                fill
                 objectFit='cover'
                 className=' border-2 border-gray-600 rounded-md'
               />

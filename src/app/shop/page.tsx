@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { earrings, shopCollections } from '@/constants'
-import { MoveDownRight } from 'lucide-react'
+import { Heart, MoveDownRight, Plus } from 'lucide-react'
 import Link from 'next/link'
 
 const ShopPage = () => {
@@ -9,12 +9,7 @@ const ShopPage = () => {
     <div>
       {/* Shop Hero  */}
       <div className='relative h-[400px] lg:h-[580px] xl:h-[790px] w-full mb-20'>
-        <Image
-          src='/Shop Hero.jpeg'
-          alt='Shop Hero'
-          layout='fill'
-          objectFit='cover'
-        />
+        <Image src='/Shop Hero.jpeg' alt='Shop Hero' fill objectFit='cover' />
       </div>
 
       {/* Collections  */}
@@ -27,7 +22,7 @@ const ShopPage = () => {
             <Image
               src={shop.image}
               alt='ombre collections'
-              layout='fill'
+              fill
               objectFit='cover'
               className='brightness-75'
             />
@@ -48,7 +43,7 @@ const ShopPage = () => {
           <Image
             src='/Categories Bracelets.jpeg'
             alt='Bracelet'
-            layout='fill'
+            fill
             objectFit='cover'
             className='brightness-75'
           />
@@ -70,7 +65,7 @@ const ShopPage = () => {
             <Image
               src='/Categories Rings.jpeg'
               alt='Rings'
-              layout='fill'
+              fill
               objectFit='cover'
               className='brightness-75'
             />
@@ -91,7 +86,7 @@ const ShopPage = () => {
             <Image
               src='/Categories Earings.jpeg'
               alt='Earings'
-              layout='fill'
+              fill
               objectFit='cover'
               className='brightness-75'
             />
@@ -114,7 +109,7 @@ const ShopPage = () => {
             <Image
               src='/Categories Chains.jpeg'
               alt='chains'
-              layout='fill'
+              fill
               objectFit='cover'
               className='brightness-75'
             />
@@ -135,7 +130,7 @@ const ShopPage = () => {
             <Image
               src='/Categories Charms.jpeg'
               alt='Charms'
-              layout='fill'
+              fill
               objectFit='cover'
               className='brightness-75'
             />
@@ -177,14 +172,24 @@ const ShopPage = () => {
               className=' bg-[rgb(230,230,230)] rounded-md text-center h-[350px] md:h-[220px] lg:h-[280px] 2xl:h-[300px] w-[320px] md:w-[190px] lg:w-[250px] 2xl:w-[280px] flex-grow'
             >
               <Link href={item.slug}>
-                <div className='h-[80%] border-b-[1px] flex items-center justify-center border-gray-400'>
+                <div className='h-[80%] border-b-[1px] flex items-center justify-center border-gray-400 relative'>
                   <div className='h-[220px] w-[220px] relative'>
                     <Image
                       src={item.image}
                       alt={item.name}
-                      layout='fill'
+                      fill
                       objectFit='contain'
                     />
+                  </div>
+                  <div className='absolute w-full h-full flex justify-between p-4 opacity-0 hover:opacity-100 transition-all duration-300'>
+                    <div className='w-10 h-10 bg-orange-800 rounded-md text-white flex justify-center items-center'>
+                      {' '}
+                      <Heart />{' '}
+                    </div>
+                    <div className='w-10 h-10 bg-orange-800 rounded-md text-white flex justify-center items-center'>
+                      {' '}
+                      <Plus />{' '}
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -205,7 +210,7 @@ const ShopPage = () => {
         <Image
           src='/Customize Jewelry.jpeg'
           alt='Customize'
-          layout='fill'
+          fill
           objectFit='cover'
           className='brightness-75'
         />
