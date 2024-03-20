@@ -391,6 +391,70 @@ export const cartItems = [
   },
 ]
 
+// Cart Items
+export const checkouts = [
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    grade: 'platinum',
+    size: '23.4',
+    price: '67.4',
+    slug: 'juhwkdsdcsdcjc',
+    quantity: '2',
+  },
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    grade: 'platinum',
+    size: '23.4',
+    price: '67.4',
+    slug: 'juhcdjkjdcjc',
+    quantity: '4',
+  },
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    grade: 'platinum',
+    size: '23.4',
+    price: '67.4',
+    slug: 'juhwejcjc',
+    quantity: '1',
+  },
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    grade: 'platinum',
+    size: '23.4',
+    price: '67.4',
+    slug: 'juhwkdsdcsdcjc',
+    quantity: '2',
+  },
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    grade: 'platinum',
+    size: '23.4',
+    price: '67.4',
+    slug: 'juhcdjkjdcjc',
+    quantity: '4',
+  },
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    grade: 'platinum',
+    size: '23.4',
+    price: '67.4',
+    slug: 'juhwejcjc',
+    quantity: '1',
+  },
+]
+
 // Feedback
 export const feedbacks = [
   {
@@ -469,4 +533,16 @@ export const shopCollections = [
     title: 'Summer Collection',
     subtitle: 'Unique Rings',
   },
+]
+
+// List Of Countries
+
+export const countries = [
+  'Select Country',
+  'United States',
+  'United Kingdom',
+  'Canada',
+  'Australia',
+  'Nigeria',
+  'Ghana',
 ]
