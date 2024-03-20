@@ -31,7 +31,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className='relative z-10'>
+    <header className='relative z-10 bg-[rgb(56,22,10)] text-slate-300'>
       {' '}
       <div
         className={`absolute w-full shadow-lg shadow-slate-300 transition-all duration-500 h-[100vh] z-10 ${
@@ -40,7 +40,7 @@ export default function Navbar() {
       >
         <Sidebar />
       </div>
-      <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-black flex justify-between items-center z-20 lg:fixed w-full bg-white'>
+      <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-slate-500 flex justify-between items-center z-20 lg:fixed w-full bg-[rgb(56,22,10)]'>
         {/* Links  */}
         <div className='hidden md:flex gap-5 lg:gap-10 flex-1 capitalize'>
           <div onMouseEnter={toggleShopDropdown} className=''>
@@ -79,7 +79,7 @@ export default function Navbar() {
           <Link href='/'>
             <h1
               style={{ fontStyle: 'italic' }}
-              className={`font-bold text-2xl italic text-center ${georgia.className}`}
+              className={`font-bold text-2xl italic text-white text-center ${georgia.className}`}
             >
               Onyiisi
             </h1>

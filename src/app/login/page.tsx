@@ -15,13 +15,13 @@ const LoginPage = () => {
         height: '100%',
       }}
     >
-      <div className='bg-white m-[100px] rounded-lg p-16'>
-        <h1 className='text-2xl font-bold text-center'>
+      <div className='bg-white md:m-[50px] xl:m-[100px] w-full md:w-[80%] lg:w-[60%] rounded-lg p-5 md:p-16'>
+        <h1 className='text-xl md:text-2xl font-bold text-center'>
           Log into your Onyiisi Account
         </h1>
         <p className='text-sm text-center'>
           Don&apos;t have an account?
-          <span className='text-orange-800 underline'>
+          <span className='text-orange-800 underline pl-2 underline-offset-2'>
             <Link href='/sign-up'>Create Account</Link>
           </span>
         </p>
@@ -37,7 +37,7 @@ const LoginPage = () => {
               id='email'
               type='email'
               required
-              className='border-[1px] border-gray-300 rounded-sm p-3 w-[500px]'
+              className='border-[1px] border-gray-300 rounded-sm p-3 w-full'
             />
           </div>
           <div className='relative py-[10px]'>
@@ -51,7 +51,7 @@ const LoginPage = () => {
               id='password'
               type='password'
               required
-              className='border-[1px]  border-gray-300 rounded-sm p-3 w-[500px]'
+              className='border-[1px]  border-gray-300 rounded-sm p-3 w-full'
             />
           </div>
           <div className='flex justify-between py-4'>

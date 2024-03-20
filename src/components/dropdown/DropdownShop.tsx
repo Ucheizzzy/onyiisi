@@ -5,7 +5,7 @@ import { categories, specials, collections } from '@/constants'
 export default function DropdownShop() {
   return (
     <div className=''>
-      <div className='py-[50px] px-9 absolute lg:fixed z-20 w-full bg-white'>
+      <div className='py-[50px] px-9 absolute lg:fixed z-20 w-full bg-[rgb(56,22,10)]'>
         <div className='flex-1 flex items-center gap-6 lg:gap-10 '>
           <div className='w-[150px] lg:w-[202px] h-[108px] lg:h-[144px] relative rounded-md mr-14 overflow-hidden'>
             <Image src='/shop.png' fill objectFit='cover' alt='shop image' />

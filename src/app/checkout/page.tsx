@@ -286,7 +286,7 @@ const CheckOutPage = () => {
       <div className='mt-20 flex justify-center'>
         <button
           type='submit'
-          className='text-white bg-orange-800 py-1 lg:py-2 w-[250px] rounded-full uppercase font-thin justify-center gap-1 lg:gap-2 cursor-pointer'
+          className='text-white bg-orange-800 py-1 lg:py-2 w-[250px] rounded-full uppercase font-thin justify-center gap-1 lg:gap-2 cursor-pointer mb-10'
         >
           Place Order
         </button>
