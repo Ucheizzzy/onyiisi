@@ -14,7 +14,7 @@ const bannerQuery = groq`*[_type == 'banner']{
 
 export default async function Home() {
   const banners: BannerProps[] = await client.fetch(bannerQuery)
-  console.log(banners)
+  // console.log(banners)
 
   return (
     <main>
