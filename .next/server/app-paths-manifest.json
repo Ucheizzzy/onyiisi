@@ -1,8 +1,6 @@
 {
-  "/product/[id]/page": "app/product/[id]/page.js",
+  "/page": "app/page.js",
   "/cart/page": "app/cart/page.js",
-  "/wish-list/page": "app/wish-list/page.js",
-  "/checkout/page": "app/checkout/page.js",
-  "/login/page": "app/login/page.js",
-  "/sign-up/page": "app/sign-up/page.js"
+  "/about/page": "app/about/page.js",
+  "/wish-list/page": "app/wish-list/page.js"
 }

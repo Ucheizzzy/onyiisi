@@ -69,7 +69,7 @@ const CartPage = () => {
               </div>
               <div className=''>
                 <hr className='border-gray-700 mb-3' />
-                <div className='flex justify-between items-center'>
+                <div className='px-5 flex justify-between items-center'>
                   <button className='flex gap-1 text-[rgb(95,40,74)] font-semibold'>
                     {' '}
                     <Heart />{' '}

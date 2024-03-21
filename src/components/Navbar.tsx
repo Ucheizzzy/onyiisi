@@ -30,6 +30,10 @@ export default function Navbar() {
     setSidebar(!sidebar)
   }
 
+  const closeSidebar = () => {
+    setSidebar(false)
+  }
+
   return (
     <header className='relative z-10 bg-[rgb(56,22,10)] text-slate-300'>
       {' '}
@@ -38,7 +42,7 @@ export default function Navbar() {
           sidebar ? 'top-0 left-0' : 'top-0 left-[-500px] shadow-none'
         }`}
       >
-        <Sidebar />
+        <Sidebar closeSidebar={closeSidebar} />
       </div>
       <div className='px-[40px] lg:px-[60px] h-20 border-b-[1px] border-slate-500 flex justify-between items-center z-20 lg:fixed w-full bg-[rgb(56,22,10)]'>
         {/* Links  */}

@@ -22,7 +22,7 @@ const LoginPage = () => {
         <p className='text-sm text-center'>
           Don&apos;t have an account?
           <span className='text-[rgb(95,40,74)] underline pl-2 underline-offset-2'>
-            <Link href='/sign-up'>Create Account</Link>
+            <Link href='/login/sign-up'>Create Account</Link>
           </span>
         </p>
         <form className='flex flex-col justify-center pt-8 gap-6'>
@@ -66,7 +66,10 @@ const LoginPage = () => {
                 Remember me
               </label>
             </div>
-            <Link href='/login' className='text-sm text-blue-500 capitalize'>
+            <Link
+              href='/login/forgot-password'
+              className='text-sm text-blue-500 capitalize'
+            >
               forgot password?
             </Link>
           </div>

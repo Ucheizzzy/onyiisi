@@ -2,7 +2,7 @@ import { Heart, Minus, Plus, ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 
-const Sidebar = () => {
+const Sidebar = ({ closeSidebar }: { closeSidebar: () => void }) => {
   const [shop, setShop] = useState(false)
   const [sales, setSales] = useState(false)
 
@@ -50,12 +50,37 @@ const Sidebar = () => {
               shop ? 'capitalize mt-4 pl-10 flex flex-col' : 'hidden'
             }`}
           >
-            <Link href='/'>Categories</Link>
-            <Link href='/'>Specials</Link>
-            <Link href='/'>Collections</Link>
+            <Link
+              onClick={() => {
+                closeSidebar()
+                handleShop()
+              }}
+              href='/'
+            >
+              Categories
+            </Link>
+            <Link
+              onClick={() => {
+                closeSidebar()
+                handleShop()
+              }}
+              href='/'
+            >
+              Specials
+            </Link>
+            <Link
+              onClick={() => {
+                closeSidebar()
+                handleShop()
+              }}
+              href='/'
+            >
+              Collections
+            </Link>
           </div>
         </div>
         <Link
+          onClick={closeSidebar}
           href='/about'
           className='flex gap-2 items-center hover:underline underline-offset-2 text-2xl pl-10'
         >
@@ -78,16 +103,40 @@ const Sidebar = () => {
               sales ? 'capitalize mt-4 pl-10 flex flex-col' : 'hidden'
             }`}
           >
-            <Link href='/'>header</Link>
-            <Link href='/'>header</Link>
-            <Link href='/'>header</Link>
+            <Link
+              onClick={() => {
+                closeSidebar()
+                handleSales()
+              }}
+              href='/'
+            >
+              header
+            </Link>
+            <Link
+              onClick={() => {
+                closeSidebar()
+                handleSales()
+              }}
+              href='/'
+            >
+              header
+            </Link>
+            <Link
+              onClick={() => {
+                closeSidebar()
+                handleSales()
+              }}
+              href='/'
+            >
+              header
+            </Link>
           </div>
         </div>
-        <Link href='/cart' className='flex gap-2'>
+        <Link onClick={closeSidebar} href='/cart' className='flex gap-2'>
           <ShoppingCart className='h-8 w-8' />
           cart
         </Link>
-        <Link href='/wish-list' className='flex gap-2'>
+        <Link onClick={closeSidebar} href='/wish-list' className='flex gap-2'>
           <Heart className='h-8 w-8' />
           wishlist
         </Link>
