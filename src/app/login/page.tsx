@@ -21,7 +21,7 @@ const LoginPage = () => {
         </h1>
         <p className='text-sm text-center'>
           Don&apos;t have an account?
-          <span className='text-orange-800 underline pl-2 underline-offset-2'>
+          <span className='text-[rgb(95,40,74)] underline pl-2 underline-offset-2'>
             <Link href='/sign-up'>Create Account</Link>
           </span>
         </p>
@@ -74,7 +74,7 @@ const LoginPage = () => {
             <input
               type='submit'
               value='login'
-              className='text-white bg-orange-800 py-1 lg:py-2 w-[50%] rounded-full uppercase font-thin justify-center gap-1 lg:gap-2 cursor-pointer'
+              className='text-white bg-[rgb(95,40,74)] py-1 lg:py-2 w-[50%] rounded-full uppercase font-thin justify-center gap-1 lg:gap-2 cursor-pointer'
             />
           </div>
         </form>

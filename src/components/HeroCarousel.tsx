@@ -46,7 +46,7 @@ export default function HeroCarousel() {
               {hero.desc}
             </p>
           ))}
-          <button className='text-white bg-orange-800 py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+          <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
             shop now
             <span>
               <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
@@ -59,8 +59,8 @@ export default function HeroCarousel() {
                 onClick={() => goToHero(idx)}
                 className={`${
                   idx === currentIndex
-                    ? 'bg-orange-800 border-none'
-                    : 'bg-transparent border-[1px] border-orange-800'
+                    ? 'bg-[rgb(95,40,74)] border-none'
+                    : 'bg-transparent border-[1px] border-[rgb(95,40,74)]'
                 }  py-[2px] w-[30px] lg:w-[50px] rounded-full`}
               ></button>
             ))}

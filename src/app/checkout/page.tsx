@@ -6,7 +6,7 @@ import { checkouts } from '@/constants'
 const CheckOutPage = () => {
   return (
     <div className='pt-5 md:pt-20 px-5 xl:px-10'>
-      <div className='flex flex-col-reverse md:flex-row gap-2 lg:pt-20'>
+      <div className='flex flex-col-reverse md:flex-row gap-8 md:gap-2 lg:pt-20'>
         <div className='flex-1 xl:px-20'>
           <h1 className='uppercase text-3xl font-bold'>Billing Information</h1>
           <form className=' flex flex-col gap-3 mt-3 w-full'>
@@ -223,7 +223,7 @@ const CheckOutPage = () => {
                 />
                 <button
                   type='submit'
-                  className='right-1 lg:absolute uppercase bg-purple-950 text-white text-md py-2 px-5 rounded-full'
+                  className='right-1 lg:absolute uppercase bg-[rgb(95,40,74)] text-white text-md py-2 px-5 rounded-full'
                 >
                   apply discount
                 </button>
@@ -286,7 +286,7 @@ const CheckOutPage = () => {
       <div className='mt-20 flex justify-center'>
         <button
           type='submit'
-          className='text-white bg-orange-800 py-1 lg:py-2 w-[250px] rounded-full uppercase font-thin justify-center gap-1 lg:gap-2 cursor-pointer mb-10'
+          className='text-white bg-[rgb(95,40,74)] py-1 lg:py-2 w-[250px] rounded-full uppercase font-thin justify-center gap-1 lg:gap-2 cursor-pointer mb-10'
         >
           Place Order
         </button>

@@ -31,7 +31,7 @@ export default function FeedbackCarousel() {
   }
 
   return (
-    <div className='mb-10'>
+    <div className='my-20'>
       <div className='relative flex justify-center items-center w-full h-[500px] md:h-[400px] lg:h-[594px]'>
         <Image
           src='/Feedback bg.jpg'

@@ -64,7 +64,7 @@ const WishListPage = () => {
                 <div className=''>
                   <hr className='border-gray-700 mb-3' />
                   <div className='flex justify-between items-center px-5'>
-                    <button className='flex gap-1 text-orange-800 font-semibold'>
+                    <button className='flex gap-1 text-[rgb(95,40,74)] font-semibold'>
                       {' '}
                       <ShoppingCart />{' '}
                       <span className='hidden md:inline'>Add to Cart</span>
@@ -87,7 +87,7 @@ const WishListPage = () => {
             <p className='uppercase text-gray-500 text-xl'>item subtotal</p>
             <p className='text-xl'>$674</p>
           </div>
-          <button className='text-white bg-orange-800 py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 mb-10 '>
+          <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 mb-10 '>
             add all to cart
           </button>
         </div>

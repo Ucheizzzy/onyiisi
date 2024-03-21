@@ -5,13 +5,13 @@ import Link from 'next/link'
 
 export default function PopularItems() {
   return (
-    <div className='p-12'>
+    <div className='p-12 bg-[rgb(56,22,10)]'>
       {/* Header */}
-      <div className='flex justify-center md:justify-between'>
+      <div className=' flex justify-center text-white md:justify-between'>
         <h3 className='uppercase text-3xl md:text-xl font-bold md:font-semibold'>
           Popular items
         </h3>
-        <button className='hidden text-black py-2 lg:py-3 w-[120px] lg:w-[150px] rounded-full uppercase font-thin text-xs md:flex items-center justify-center gap-1 lg:gap-2 border-2 border-black '>
+        <button className='hidden py-2 lg:py-3 w-[120px] lg:w-[150px] rounded-full uppercase font-thin text-xs md:flex items-center justify-center gap-1 lg:gap-2 border-2 border-white '>
           learn more
           <span>
             <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />

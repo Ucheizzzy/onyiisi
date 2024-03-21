@@ -70,7 +70,7 @@ const CartPage = () => {
               <div className=''>
                 <hr className='border-gray-700 mb-3' />
                 <div className='flex justify-between items-center'>
-                  <button className='flex gap-1 text-orange-800 font-semibold'>
+                  <button className='flex gap-1 text-[rgb(95,40,74)] font-semibold'>
                     {' '}
                     <Heart />{' '}
                     <span className='hidden md:inline'> Move to Wishlist</span>
@@ -94,7 +94,7 @@ const CartPage = () => {
           <p className='text-xl'>$674</p>
         </div>
 
-        <button className='text-white bg-orange-800 py-2 lg:py-3 w-[70%] md:w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
+        <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[70%] md:w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
           <Link href='/checkout' className='w-full'>
             proceed to checkout
           </Link>

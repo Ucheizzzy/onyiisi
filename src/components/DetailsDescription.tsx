@@ -26,11 +26,11 @@ const DetailsDescription = () => {
 
   return (
     <div className='pt-10'>
-      <div className='flex gap-10'>
-        <div className='flex flex-col gap-3'>
+      <div className='flex gap-4 md:gap-10'>
+        <div className='flex text-sm md:text-lg uppercase flex-col gap-3 text-gray-500'>
           <p
             onClick={toggleDescription}
-            className={`uppercase text-lg hover:underline text-gray-500 hover:text-gray-800 cursor-pointer ${
+            className={` hover:underline hover:text-gray-800 cursor-pointer ${
               showDesc ? 'underline text-gray-800' : ''
             }`}
           >
@@ -38,7 +38,7 @@ const DetailsDescription = () => {
           </p>
           <p
             onClick={toggleReviews}
-            className={`uppercase text-lg hover:underline text-gray-500 hover:text-gray-800 cursor-pointer ${
+            className={` hover:underline hover:text-gray-800 cursor-pointer ${
               showRev ? 'underline text-gray-800' : ''
             }`}
           >
@@ -46,7 +46,7 @@ const DetailsDescription = () => {
           </p>
           <p
             onClick={toggleSpecifications}
-            className={`uppercase text-lg hover:underline text-gray-500 hover:text-gray-800 cursor-pointer ${
+            className={` hover:underline hover:text-gray-800 cursor-pointer ${
               showSpec ? 'underline text-gray-800' : ''
             }`}
           >
@@ -55,7 +55,7 @@ const DetailsDescription = () => {
         </div>
         <div className='text-gray-800'>
           <div className={`${showDesc ? 'block' : 'hidden'}`}>
-            <p className=''>
+            <p className='text-xs md:text-sm'>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
               veritatis obcaecati quas quos unde aperiam ipsam deleniti soluta
               explicabo nihil, officia cumque, magnam, sapiente ex consectetur
@@ -82,10 +82,10 @@ const DetailsDescription = () => {
           </div>
           <div className={`${showRev ? 'block' : 'hidden'}`}>
             <div className='relative mb-3'>
-              <p className='capitalize text-lg text-black'>honey</p>
-              <p className='capitalize text-sm mb-3'>apr 4, 2023</p>
-              <p className='text-lg'>I Love my chain</p>
-              <p className='text-black'>
+              <p className='capitalize text-md md:text-lg text-black'>honey</p>
+              <p className='capitalize text-xs md:text-sm mb-3'>apr 4, 2023</p>
+              <p className='text-md md:text-lg'>I Love my chain</p>
+              <p className='text-black text-xs md:text-sm'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aliquid, perspiciatis?
               </p>
@@ -124,10 +124,10 @@ const DetailsDescription = () => {
               </div>
             </div>
             <div className='relative mb-3'>
-              <p className='capitalize text-lg text-black'>honey</p>
-              <p className='capitalize text-sm mb-3'>apr 4, 2023</p>
-              <p className='text-lg'>I Love my chain</p>
-              <p className='text-black'>
+              <p className='capitalize text-md md:text-lg text-black'>honey</p>
+              <p className='capitalize text-xs md:text-sm mb-3'>apr 4, 2023</p>
+              <p className='text-md md:text-lg'>I Love my chain</p>
+              <p className='text-black text-xs md:text-sm'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aliquid, perspiciatis?
               </p>
@@ -166,10 +166,10 @@ const DetailsDescription = () => {
               </div>
             </div>
             <div className='relative mb-3'>
-              <p className='capitalize text-lg text-black'>honey</p>
-              <p className='capitalize text-sm mb-3'>apr 4, 2023</p>
-              <p className='text-lg'>I Love my chain</p>
-              <p className='text-black'>
+              <p className='capitalize text-md md:text-lg text-black'>honey</p>
+              <p className='capitalize text-xs md:text-sm mb-3'>apr 4, 2023</p>
+              <p className='text-md md:text-lg'>I Love my chain</p>
+              <p className='text-black text-xs md:text-sm'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aliquid, perspiciatis?
               </p>
@@ -208,7 +208,9 @@ const DetailsDescription = () => {
               </div>
             </div>
           </div>
-          <div className={`${showSpec ? 'block' : 'hidden'}`}>
+          <div
+            className={`text-sm md:text-md ${showSpec ? 'block' : 'hidden'}`}
+          >
             <ul className='list-disc pl-5 capitalize'>
               <li>
                 Hole Size: <span className='pl-3'>2.5 mm</span>
