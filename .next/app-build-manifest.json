@@ -61,6 +61,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/login/sign-up/page.js"
+    ],
+    "/sales/[category]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sales/[category]/page.js"
     ]
   }
 }

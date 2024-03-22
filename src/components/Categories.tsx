@@ -19,7 +19,7 @@ export default function Categories() {
               key={idx}
               className='w-[352px] lg:w-[470px] xl:w-[628px] h-[267px] lg:h-[356px] xl:h-[475px] relative flex justify-center items-center overflow-hidden flex-grow'
             >
-              <Link href='/sales/trending'>
+              <Link href={category.slug}>
                 <Image
                   src={category.image}
                   alt={category.title}
