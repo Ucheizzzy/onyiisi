@@ -1,7 +1,7 @@
 import dbConnect from '@/lib/db'
 import User from '@/models/User'
 import { NextRequest, NextResponse } from 'next/server'
-import bcryptjs from 'bcryptjs'
+import bcrypt from 'bcryptjs'
 export async function POST(req: NextRequest) {
   try {
     await dbConnect()
@@ -18,9 +18,9 @@ export async function POST(req: NextRequest) {
     }
 
     //generate salt
-    const salt = await bcryptjs.genSalt(10)
+    const salt = bcrypt.genSaltSync(10)
     //hashed password
-    const hashedPassword = await bcryptjs.hash(password, salt)
+    const hashedPassword = bcrypt.hashSync(password, salt)
     await new User({ name, email, password: hashedPassword }).save()
 
     return NextResponse.json({ message: 'User created successfully' })

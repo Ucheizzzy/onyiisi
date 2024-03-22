@@ -25,3 +25,10 @@ export const SignUpFormSchema = z.object({
 })
 
 export type SignUpFormType = z.infer<typeof SignUpFormSchema>
+
+export const LoginFormSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(5, 'Password must be at least 5 characters'),
+})
+
+export type LoginFormType = z.infer<typeof LoginFormSchema>
