@@ -1023,9 +1023,6 @@ video {
 .w-full {
   width: 100%;
 }
-.w-\[90\%\] {
-  width: 90%;
-}
 .flex-1 {
   flex: 1 1 0%;
 }
