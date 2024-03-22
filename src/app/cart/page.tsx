@@ -91,12 +91,15 @@ const CartPage = () => {
           <p className='uppercase text-gray-500 text-xl'>item subtotal</p>
           <p className='text-xl'>$674</p>
         </div>
-        <button className='text-white bg-orange-800 py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
+        <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
           proceed to checkout
         </button>
-        <p className='uppercase font-semibold underline py-5 underline-offset-8 text-gray-800'>
+        <Link
+          href='/shop'
+          className='uppercase font-semibold hover:underline py-5 underline-offset-8 text-gray-700'
+        >
           continue shopping
-        </p>
+        </Link>
       </div>
     </div>
   )

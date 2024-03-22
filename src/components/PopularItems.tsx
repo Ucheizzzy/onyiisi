@@ -37,11 +37,11 @@ export default function PopularItems() {
                   />
                 </div>
                 <div className='absolute w-full h-full flex justify-between p-4 opacity-0 hover:opacity-100 transition-all duration-300'>
-                  <div className='w-10 h-10 bg-orange-800 rounded-md text-white flex justify-center items-center'>
+                  <div className='w-10 h-10 hover:scale-125 bg-[rgb(95,40,74)] rounded-md text-white flex justify-center items-center transition-all duration-300'>
                     {' '}
                     <Heart />{' '}
                   </div>
-                  <div className='w-10 h-10 bg-orange-800 rounded-md text-white flex justify-center items-center'>
+                  <div className='w-10 h-10 hover:scale-125 bg-[rgb(95,40,74)] rounded-md text-white flex justify-center items-center transition-all duration-300'>
                     {' '}
                     <Plus />{' '}
                   </div>

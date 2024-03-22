@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const ShopPage = () => {
   return (
-    <div>
+    <div className='mb-40'>
       {/* Shop Hero  */}
       <div className='relative h-[400px] lg:h-[580px] xl:h-[790px] w-full mb-20'>
         <Image src='/Shop Hero.jpeg' alt='Shop Hero' fill objectFit='cover' />
@@ -51,12 +51,14 @@ const ShopPage = () => {
             <h1 className='capitalize text-3xl text-center font-thin text-white pb-3'>
               Bracelet
             </h1>
-            <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
-              learn more
-              <span>
-                <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
-              </span>
-            </button>
+            <Link href='/shop/bracelets'>
+              <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+                learn more
+                <span>
+                  <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
         <div className='flex flex-col md:w-1/3 gap-5 xl:gap-10'>
@@ -73,12 +75,14 @@ const ShopPage = () => {
               <h1 className='capitalize text-3xl text-center font-thin text-white pb-3'>
                 Rings
               </h1>
-              <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
-                learn more
-                <span>
-                  <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
-                </span>
-              </button>
+              <Link href='/shop/rings'>
+                <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+                  learn more
+                  <span>
+                    <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
           <div className='relative w-full h-[200px] md:h-3/5 flex justify-center items-center'>
@@ -92,14 +96,16 @@ const ShopPage = () => {
             />
             <div className='absolute'>
               <h1 className='capitalize text-3xl text-center font-thin text-white pb-3'>
-                Earings
+                Earrings
               </h1>
-              <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
-                learn more
-                <span>
-                  <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
-                </span>
-              </button>
+              <Link href='/shop/earrings'>
+                <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+                  learn more
+                  <span>
+                    <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -117,12 +123,14 @@ const ShopPage = () => {
               <h1 className='capitalize text-3xl text-center font-thin text-white pb-3'>
                 chains
               </h1>
-              <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
-                learn more
-                <span>
-                  <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
-                </span>
-              </button>
+              <Link href='/shop/chains'>
+                <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+                  learn more
+                  <span>
+                    <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
           <div className='relative w-full h-[200px] md:h-2/5 flex justify-center items-center'>
@@ -138,12 +146,14 @@ const ShopPage = () => {
               <h1 className='capitalize text-3xl text-center font-thin text-white pb-3'>
                 charms
               </h1>
-              <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
-                learn more
-                <span>
-                  <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
-                </span>
-              </button>
+              <Link href='/shop/charms'>
+                <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[100px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+                  learn more
+                  <span>
+                    <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -222,7 +232,7 @@ const ShopPage = () => {
             New Amazing Chains From Our Party Collections. New Amazing Chains
             From Our Party Collections
           </p>
-          <button className='text-white bg-orange-800 py-2 lg:py-3 w-[120px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+          <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[120px] lg:w-[150px] rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
             learn more
             <span>
               <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />

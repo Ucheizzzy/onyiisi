@@ -21,7 +21,7 @@ export default function SalesCarousel() {
   }
 
   return (
-    <div className='bg-[rgb(56,22,10)] my-5 py-5 '>
+    <div className='bg-[rgb(56,22,10)] my-10 py-5 '>
       <h1 className='text-lg md:text-2xl text-white font-bold p-5 uppercase'>
         Related products
       </h1>
@@ -58,7 +58,7 @@ export default function SalesCarousel() {
               idx === currentIndex ? 'opacity-100' : 'opacity-0 hidden'
             }`}
           >
-            <div className='relative h-[380px] w-[359px] overflow-hidden rounded-xl '>
+            <div className='relative h-[300px] w-[280px] overflow-hidden rounded-xl '>
               <Image
                 src={sale.image}
                 alt={sale.title}
@@ -81,11 +81,11 @@ export default function SalesCarousel() {
         ))}
         <ChevronLeft
           onClick={prevSale}
-          className='absolute left-0 cursor-pointer hover:scale-150 ease-in-out duration-300'
+          className='absolute left-3 cursor-pointer hover:scale-150 ease-in-out text-white duration-300'
         />
         <ChevronRight
           onClick={nextSale}
-          className='absolute right-0 cursor-pointer hover:scale-150 ease-in-out duration-300'
+          className='absolute right-3 text-white cursor-pointer hover:scale-150 ease-in-out duration-300'
         />
       </div>
     </div>

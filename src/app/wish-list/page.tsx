@@ -85,15 +85,13 @@ const WishListPage = () => {
             <p className='uppercase text-gray-500 text-xl'>item subtotal</p>
             <p className='text-xl'>$674</p>
           </div>
-          <button className='text-white bg-orange-800 py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
+          <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
             add all to cart
           </button>
         </div>
-        {/* Related Products  */}
-        <div className='hidden md:inline'>
-          <RelatedProducts />
-        </div>
       </div>
+      {/* Related Products  */}
+      <RelatedProducts />
     </div>
   )
 }
