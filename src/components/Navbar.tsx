@@ -1,18 +1,23 @@
 'use client'
 
-import { ShoppingCart, Heart, UserRound, Menu, X } from 'lucide-react'
+import { ShoppingCart, Heart, UserRound, Menu, X, LogOut } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Noto_Sans_Georgian } from 'next/font/google'
 import DropdownSales from './dropdown/DropdownSales'
 import DropdownShop from './dropdown/DropdownShop'
 import Sidebar from './Sidebar'
+import { signOut, useSession } from 'next-auth/react'
+import { Button } from './ui/button'
 
 const georgia = Noto_Sans_Georgian({ subsets: ['latin'] })
 
 export default function Navbar() {
+  const { data: session } = useSession()
   const [shopDropDown, setShopDropDown] = useState(false)
   const [salesDropDown, setSalesDropDown] = useState(false)
+
+  console.log(session)
 
   const toggleShopDropdown = () => {
     setShopDropDown(!shopDropDown)
@@ -55,6 +60,7 @@ export default function Navbar() {
           >
             sales
           </Link>
+          {session && <p className=''>Hi {session?.user?.name}</p>}
         </div>
 
         {/* Side Bar  */}
@@ -79,19 +85,32 @@ export default function Navbar() {
         </div>
 
         {/* Navbar Icons  */}
-        <div className='flex-1 flex gap-5 lg:scale-100 justify-end'>
+        <div className='flex-1 flex gap-5 lg:scale-100 justify-end items-center'>
           <Link href={'/studio'} target='_blank'>
             Studio
           </Link>
+
+          {session && (
+            <Link href={'/orders'} target='_blank'>
+              Orders
+            </Link>
+          )}
+
           <Link href='/cart'>
             <ShoppingCart className='cursor-pointer hidden md:block' />
           </Link>
           <Link href='/wish-list'>
             <Heart className='cursor-pointer hidden md:block' />
           </Link>
-          <Link href='/login'>
-            <UserRound className='cursor-pointer' />
-          </Link>
+          {session ? (
+            <Button onClick={() => signOut()} variant={'ghost'}>
+              <LogOut className='cursor-pointer' />
+            </Button>
+          ) : (
+            <Link href='/login'>
+              <UserRound className='cursor-pointer' />
+            </Link>
+          )}
         </div>
       </div>
 

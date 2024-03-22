@@ -30,34 +30,34 @@ export const authOptions: NextAuthOptions = {
         password: {},
       },
       async authorize(credentials, req) {
-        console.log('credentials', credentials)
-
         const formEmail = credentials?.email as string
         const plainPassword = credentials?.password as string
         // connect to the database
         await dbConnect()
         // find the email address
         const isUserExist = await User.findOne({ email: formEmail })
-        console.log(isUserExist)
 
         if (!isUserExist) {
           return null
         }
 
         // validate the password
-        const isValidPassword =
-          isUserExist &&
-          bcrypt.compareSync(plainPassword, isUserExist?.password)
-        // console.log("isValidPassword", isValidPassword);
-        if (isValidPassword) {
-          return isUserExist
+        const isValidPassword = bcrypt.compareSync(
+          plainPassword,
+          isUserExist?.password
+        )
+
+        if (!isValidPassword) {
+          return null
         }
-        return null
-        // return {
-        //   id: isUserExist?._id,
-        //   name: isUserExist?.name,
-        //   email: isUserExist?.email,
-        // }
+        // return null
+        return {
+          id: isUserExist?._id,
+          name: isUserExist?.name,
+          email: isUserExist?.email,
+          role: isUserExist?.role,
+          is_admin: isUserExist?.is_admin,
+        }
       },
     }),
   ],
