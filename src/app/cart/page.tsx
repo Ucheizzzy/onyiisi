@@ -72,13 +72,11 @@ const CartPage = () => {
                 <div className='px-5 flex justify-between items-center'>
                   <button className='flex gap-1 text-[rgb(95,40,74)] font-semibold'>
                     {' '}
-                    <Heart />{' '}
-                    <span className='hidden md:inline'> Move to Wishlist</span>
+                    <Heart /> Move to Wishlist
                   </button>
                   <button className='flex gap-1 text-gray-500 text-sm'>
                     {' '}
-                    <Trash size={18} />{' '}
-                    <span className='hidden md:inline'>Remove</span>
+                    <Trash size={18} /> Remove
                   </button>
                 </div>
               </div>
@@ -93,11 +91,8 @@ const CartPage = () => {
           <p className='uppercase text-gray-500 text-xl'>item subtotal</p>
           <p className='text-xl'>$674</p>
         </div>
-
-        <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[70%] md:w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
-          <Link href='/checkout' className='w-full'>
-            proceed to checkout
-          </Link>
+        <button className='text-white bg-orange-800 py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
+          proceed to checkout
         </button>
         <p className='uppercase font-semibold underline py-5 underline-offset-8 text-gray-800'>
           continue shopping

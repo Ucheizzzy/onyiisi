@@ -42,7 +42,7 @@ const WishListPage = () => {
                 <Image
                   src={item.img}
                   alt='Earring'
-                  layout='fill'
+                  fill
                   objectFit='cover'
                   className=' border-2 border-gray-600 rounded-md'
                 />
@@ -66,13 +66,11 @@ const WishListPage = () => {
                   <div className='flex justify-between items-center px-5'>
                     <button className='flex gap-1 text-[rgb(95,40,74)] font-semibold'>
                       {' '}
-                      <ShoppingCart />{' '}
-                      <span className='hidden md:inline'>Add to Cart</span>
+                      <ShoppingCart /> Add to Cart
                     </button>
                     <button className='flex gap-1 text-gray-500 text-sm'>
                       {' '}
-                      <Trash size={18} />{' '}
-                      <span className='hidden md:inline'>Remove</span>
+                      <Trash size={18} /> Remove
                     </button>
                   </div>
                 </div>
@@ -87,7 +85,7 @@ const WishListPage = () => {
             <p className='uppercase text-gray-500 text-xl'>item subtotal</p>
             <p className='text-xl'>$674</p>
           </div>
-          <button className='text-white bg-[rgb(95,40,74)] py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 mb-10 '>
+          <button className='text-white bg-orange-800 py-2 lg:py-3 w-[50%] lg:w-[30%] rounded-full uppercase font-bold text-md flex items-center justify-center gap-1 lg:gap-2 '>
             add all to cart
           </button>
         </div>
