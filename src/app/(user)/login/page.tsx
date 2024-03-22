@@ -1,5 +1,15 @@
+'use client'
+import { CustomFormFields } from '@/components/forms/custom-form-field'
+import { Button } from '@/components/ui/button'
+import { Form } from '@/components/ui/form'
+import { SignUpFormSchema, type SignUpFormType } from '@/lib/types'
 import Link from 'next/link'
 import React from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { toast } from 'sonner'
+import { useRouter } from 'next/navigation'
+import { LoaderIcon } from 'lucide-react'
 
 const LoginPage = () => {
   return (
