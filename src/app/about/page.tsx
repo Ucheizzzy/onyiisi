@@ -27,7 +27,7 @@ const AboutPage = () => {
             and every piece tells a story. Learn more about our journey, our
             passion for luxury, and our commitment to personalized elegance.
           </p>
-          <button className='text-white bg-orange-800 py-2 px-5 rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
+          <button className='text-white bg-[rgb(95,40,74)] py-2 px-5 rounded-full uppercase font-thin text-xs flex items-center justify-center gap-1 lg:gap-2 '>
             learn more
             <span>
               <MoveDownRight className='w-4 lg:w-5 h-4 lg:h-5 pt-1' />
@@ -98,7 +98,7 @@ const AboutPage = () => {
       {/* Gift Someone  */}
 
       <div className='flex flex-col md:flex-row h-[700px] md:h-[420px] lg:h-[492px] my-20'>
-        <div className='h-[40%] md:h-full md:w-[50%] bg-[rgb(224,224,224)] flex flex-col justify-center items-center'>
+        <div className='h-[40%] md:h-full md:w-[50%] bg-[rgb(217,199,211)] flex flex-col justify-center items-center'>
           <div className='w-[75%] lg:w-[40%] text-center '>
             <h1 className='text-2xl font-semibold'>Send a Gift to Someone</h1>
             <p className='text-sm'>
@@ -119,7 +119,7 @@ const AboutPage = () => {
 
       {/* Product Catalogue  */}
 
-      <div className=' mx-5 lg:mx-10 xl:mx-20'>
+      <div className='bg-[rgb(56,22,10)] text-white p-5 lg:px-10 xl:px-20 '>
         <h1 className='text-lg md:text-xl lg:text-2xl font-bold uppercase my-3 lg:my-5'>
           {' '}
           product catalogue
@@ -147,7 +147,7 @@ const AboutPage = () => {
 
       {/* FAQ  */}
 
-      <div className='relative flex justify-center items-center h-[750px] w-full mt-20'>
+      <div className='relative flex justify-center items-center h-[750px] w-full my-20'>
         <Image
           src='/FAQ bg.jpeg'
           alt='faq bg'
@@ -166,7 +166,7 @@ const AboutPage = () => {
 
       {/* Social Media  */}
 
-      <div className='mx-5 lg:mx-10 xl:mx-20'>
+      <div className='mx-5 lg:mx-10 xl:mx-20 my-5'>
         <h1 className='text-2xl text-center md:text-left font-bold uppercase my-5'>
           our social media
         </h1>
