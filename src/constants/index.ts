@@ -546,3 +546,54 @@ export const countries = [
   'Nigeria',
   'Ghana',
 ]
+
+export const historyDetails = [
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    id: '21345679AD',
+    date: '06/10/2024',
+    status: 'delivered',
+  },
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    id: '21345679AD',
+    date: '06/10/2024',
+    status: 'delivered',
+  },
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    id: '21345679AD',
+    date: '06/10/2024',
+    status: 'delivered',
+  },
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    id: '21345679AD',
+    date: '06/10/2024',
+    status: 'delivered',
+  },
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    id: '21345679AD',
+    date: '06/10/2024',
+    status: 'delivered',
+  },
+  {
+    img: '/Details Earring.jpg',
+    title: 'midnight enchantment',
+    desc: 'a twinkling starlight',
+    id: '21345679AD',
+    date: '06/10/2024',
+    status: 'delivered',
+  },
+]
