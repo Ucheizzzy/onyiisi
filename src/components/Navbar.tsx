@@ -17,7 +17,7 @@ export default function Navbar() {
   const [shopDropDown, setShopDropDown] = useState(false)
   const [salesDropDown, setSalesDropDown] = useState(false)
 
-  console.log(session)
+  // console.log(session)
 
   const toggleShopDropdown = () => {
     setShopDropDown(!shopDropDown)
@@ -95,13 +95,22 @@ export default function Navbar() {
               Orders
             </Link>
           )}
-
-          <Link href='/cart'>
-            <ShoppingCart className='cursor-pointer hidden md:block' />
-          </Link>
-          <Link href='/wish-list'>
-            <Heart className='cursor-pointer hidden md:block' />
-          </Link>
+          <div className='relative'>
+            <Link href='/cart'>
+              <ShoppingCart className='cursor-pointer hidden md:block' />
+            </Link>
+            <p className='absolute top-[-4px] right-[-6px] bg-gray-800 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-semibold'>
+              {2}
+            </p>
+          </div>
+          <div className='relative'>
+            <Link href='/wish-list'>
+              <Heart className='cursor-pointer hidden md:block' />
+            </Link>
+            <p className='absolute top-[-4px] right-[-6px] bg-gray-800 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-semibold'>
+              {2}
+            </p>
+          </div>
           {session ? (
             <Button onClick={() => signOut()} variant={'ghost'}>
               <LogOut className='cursor-pointer' />
